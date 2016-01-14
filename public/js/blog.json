@@ -1,82 +1,84 @@
-[
-  {
-    "title": "Forensics: The Craft of Asking Good Questions",
-    "date": "August 16, 2015",
-    "link": "c9-questions.html"
-  },
-  {
-    "title": "Making a Choice: My Experience with Confict",
-    "date": "August 6, 2015",
-    "link": "c8-conflict.html"
-  },
-  {
-    "title": "Putting Things in Order: Sorting Algorithms and Efficiency",
-    "date": "August 5, 2015",
-    "link": "t8-tech.html"
-  },
-  {
-    "title": "Being Open",
-    "date": "July 30, 2015",
-    "link": "c7-values.html"
-  },
-  {
-    "title": "Objects and their Prototypes: JavaScript from a Ruby Perspective",
-    "date": "July 29, 2015",
-    "link": "t7-JavaScript.html"
-  },
-  {
-    "title": "The Crab in the Bucket: The Dangers of Stereotype Threat",
-    "date": "July 24, 2015",
-    "link": "c6-stereotype-threat.html"
-  },
-  {
-    "title": "Mixing it Up (or in): Classes and Modules in Ruby",
-    "date": "July 24, 2015",
-    "link": "t6-oop-concepts.html"
-  },
-  {
-    "title": "Feedback: DBC's True Gift",
-    "date": "July 15, 2015",
-    "link": "c5-feedback.html"
-  },
-  {
-    "title": "Do You Model? Classes in Ruby Do",
-    "date": "July 15, 2015",
-    "link": "t5-ruby-classes.html"
-  },
-  {
-    "title": "The Name Game: Internet Security and the DNS",
-    "date": "July 8, 2015",
-    "link": "c4-tech-issues.html"
-  },
-  {
-    "title": "Over and Over Again: Cycling Through Enumerables in Ruby",
-    "date": "July 8, 2015",
-    "link": "t4-enumerable-methods.html"
-  },
-  {
-    "title": "How Do You Think? A Metacognitive Journey",
-    "date": "June 28, 2015",
-    "link": "c3-thinking-style.html"
-  },
-  {
-    "title": "Arrays and Hashes: An Intro to Collections in Ruby",
-    "date": "June 26, 2015",
-    "link": "t3-arrays-hashes.html"
-  },
-  {
-    "title": "Margin Border, and Padding: The Ins, Outs, and What-Have-Yous",
-    "date": "June 21, 2015",
-    "link": "t2-css-design.html"
-  },
-  {
-    "title": "Are You Experienced? Your Time at DBC",
-    "date": "June 12, 2015",
-    "link": "c1-chefs-kitchen.html"
-  },
-  {
-    "title": "Version Control: Your Real-Life Undo Button",
-    "date": "June 12, 2015",
-    "link": "t1-git-blog.html"
-  }
-]
+{
+  "blog-posts": [
+    {
+      "title": "Forensics: The Craft of Asking Good Questions",
+      "date": "August 16, 2015",
+      "link": "c9-questions.html"
+    },
+    {
+      "title": "Making a Choice: My Experience with Confict",
+      "date": "August 6, 2015",
+      "link": "c8-conflict.html"
+    },
+    {
+      "title": "Putting Things in Order: Sorting Algorithms and Efficiency",
+      "date": "August 5, 2015",
+      "link": "t8-tech.html"
+    },
+    {
+      "title": "Being Open",
+      "date": "July 30, 2015",
+      "link": "c7-values.html"
+    },
+    {
+      "title": "Objects and their Prototypes: JavaScript from a Ruby Perspective",
+      "date": "July 29, 2015",
+      "link": "t7-JavaScript.html"
+    },
+    {
+      "title": "The Crab in the Bucket: The Dangers of Stereotype Threat",
+      "date": "July 24, 2015",
+      "link": "c6-stereotype-threat.html"
+    },
+    {
+      "title": "Mixing it Up (or in): Classes and Modules in Ruby",
+      "date": "July 24, 2015",
+      "link": "t6-oop-concepts.html"
+    },
+    {
+      "title": "Feedback: DBC's True Gift",
+      "date": "July 15, 2015",
+      "link": "c5-feedback.html"
+    },
+    {
+      "title": "Do You Model? Classes in Ruby Do",
+      "date": "July 15, 2015",
+      "link": "t5-ruby-classes.html"
+    },
+    {
+      "title": "The Name Game: Internet Security and the DNS",
+      "date": "July 8, 2015",
+      "link": "c4-tech-issues.html"
+    },
+    {
+      "title": "Over and Over Again: Cycling Through Enumerables in Ruby",
+      "date": "July 8, 2015",
+      "link": "t4-enumerable-methods.html"
+    },
+    {
+      "title": "How Do You Think? A Metacognitive Journey",
+      "date": "June 28, 2015",
+      "link": "c3-thinking-style.html"
+    },
+    {
+      "title": "Arrays and Hashes: An Intro to Collections in Ruby",
+      "date": "June 26, 2015",
+      "link": "t3-arrays-hashes.html"
+    },
+    {
+      "title": "Margin Border, and Padding: The Ins, Outs, and What-Have-Yous",
+      "date": "June 21, 2015",
+      "link": "t2-css-design.html"
+    },
+    {
+      "title": "Are You Experienced? Your Time at DBC",
+      "date": "June 12, 2015",
+      "link": "c1-chefs-kitchen.html"
+    },
+    {
+      "title": "Version Control: Your Real-Life Undo Button",
+      "date": "June 12, 2015",
+      "link": "t1-git-blog.html"
+    }
+  ]
+}

@@ -14,8 +14,17 @@
   <script id="projects-template" type="text/x-handlebars-template">
     {{#each projects}}
       <section class="project toc-item">
-        <span class="project-title"><a href={{this.link}}>{{this.name}}</a></span>
-        <span class="project-date">{{this.date}}</span>
+        <span class="toc-title"><a href={{this.link}}>{{this.name}}</a></span>
+        <span class="toc-date">{{this.date}}</span>
+      </section>
+    {{/each}}
+  </script>
+
+  <script id="blog-template" type="text/x-handlebars-template">
+    {{#each blog-posts}}
+      <section class="project toc-item">
+        <span class="toc-title"><a href={{this.link}}>{{this.title}}</a></span>
+        <span class="toc-date">{{this.date}}</span>
       </section>
     {{/each}}
   </script>

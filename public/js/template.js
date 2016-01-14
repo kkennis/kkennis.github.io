@@ -1,12 +1,13 @@
 $(document).ready(function(){
   $.getJSON('js/projects.json', function(data){
     var projectsTemplate = $('#projects-template').html();
-    console.log(projectsTemplate);
-    var tempScript = Handlebars.compile(projectsTemplate);
-    var compiledHTML = tempScript(data);
-    console.log(compiledHTML);
+    var compiledHTML = Handlebars.compile(projectsTemplate)(data);
     $('.projects').html(compiledHTML);
   })
-  .fail(function(err){
-  });
+
+  $.getJSON('js/blog.json', function(data){
+    var blogTemplate = $('#blog-template').html();
+    var compiledHTML = Handlebars.compile(blogTemplate)(data);
+    $('.blog').html(compiledHTML);
+  })
 })
