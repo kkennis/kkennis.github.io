@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+  <title>Kevin's Blog Template</title>
+  <meta charset="UTF-8">    
+  <link rel="stylesheet" type="text/css" href="../css/blog.css">
+  <link href='https://fonts.googleapis.com/css?family=Raleway:100,400,700,900' rel='stylesheet' type='text/css'>
+
+  
+
+</head>
+
+<main>
+  <header>
+    <a href="../index.html#blog" id="homelink">Kevin's Homepage</a>
+
+  </header>
+  
+  <div class="container">
+    <h1>Objects and Their Prototypes: JavaScript from a Ruby Perspective</h1>
+    <h4>July 29, 2015</h4>
+    <article>
+      <p>
+        Hello programmers! I hope your life's journey is continuing well - same for your journey into the world of programming. If you're a young programmer, you may be enjoying your first language, even getting confident in it, feeling like you can do cool things. Your Ruby-fu may be strong, but - and I'm saying this for your own good - it's not enough! As the seasoned programmers reading this can tell you, no professional developer knows just one language - sure, they may be better at some than others, but versatility is a huge part of the developer's toolbox. In real life, learning new languages can help you meet new people, open you up to new experiences and ways of thinking, and keep your mind sharp, attentive and limber. Programming languages are very much the same! Knowing different languages can help you in many ways, including getting to know the similiarities of all languages (and therefore some of the underpinnings allowing us to use these languages), learning which languages best suit certain types of projects, and keeping your mental problem-solving toolbox flexible (not to mention marketable).
+      </p>
+      <p>
+        So, with that, let's touch on JavaScript - as I read somewhere on the Internet, JavaScript is considered the "language of the web." Unlike Ruby, nearly every computer on Earth can interpret JavaScript, and JS is widely used across the web, for platforms ranging from e-commerce, to online games, to just making your website a little more interactive. Using the DOM (Document Object Model - that is, the hierarchical model of how your HTML and CSS is rendered on a webpage), you can manipulate elements, their styles, and dynamically reformat your page in response to user events. It's pretty cool! Check it out when you get a chance. There's a lot of similiarities between JavaScript and Ruby - they're both dynamically typed, both object-oriented, but there's also a few differences - we'll go over them now, and when you get to tinkering with JS, you won't be tripped up by some of its weird (to you - JS fanatics would probably call Ruby weird) syntax.
+      </p>
+      <p>
+        First, let's talk data structures - the workhorses of any programming languages. Remember reading about all of Ruby's cool data structures and all the behavior granted to them through Enumerable? Yeah, JavaScript doesn't do that. Instead, data can be stored in an Object - JavaScript's catch-all term for any variable that is not a primitive type (i.e. Number, Boolean, String, and a couple others). Objects, like Ruby hashes, can map keys to values, and we even use the same syntax:
+      </p>
+      <p>
+        <pre>
+          myObject = {
+            property1: "value-1",
+            property2: "value-2",
+            property3: 3
+          }
+        </pre>
+      </p>
+      <p>
+        Looks familiar, right? Even the exact same, you say? That's just a Ruby hash, you're telling me? That's a crackerjack eye you have - but this is a JavaScript object! We map keys to values in the same way, wrap them in the curly braces, and assign it to a variable to store it - just like hash literal notation in Ruby. But note our variable name - myObject. This points to one difference between JavaScript and Ruby, although it's more in convention than the language itself. JS programmers like to use camel case, or camelCase - this is the convention of naming a variable starting with a lowercase letter, and instead of using cases capitalizing every new word. In Ruby, we might have something like my_object - this is Ruby's conventional underscores variable naming style. Which one is better? Depends what team you're on.
+      </p>
+      <p>
+        Back to JS objects now - just like Ruby hashes, they can be accessed with bracket notation. For instance, <code>myObject["property1"]</code> will return <code>value-1</code> - however, this isn't the only way. In JS, we can also use dot notation to access an objects properties, e.g. <code>myObject.property1</code>. Interesting, right? In this way, we can see that the property belongs to the object, or rather, that the property is a member of the object. In <em>this</em> way, you can think of an object as an instance of a Ruby custom class - just one without a class definition to provide a framework. In creating a new Object, we create a new "class" on the fly. Not ethat we can also add new properties (and functions) on the fly: <code>myObject.property4 = "Four"</code> is perfectly valid, and that object will now have that new property.
+      </p>
+      <p>
+        So now we know how to create a new JS object, and give it some cool properties and functions. But hey, you're saying, what if we want to create different instances of that same object? How can we do that now? Ruby classes were cool, and you took them away! Never fear - JS is object-orieted, and there's a way to do this as well! In JS, we can define constructor functions that will create objects of just our liking, kind of (not really, but helps if you're coming from Ruby) like standalone Ruby <code>initialize</code> methods. Say we wanted to create a lot of <code>Song</code> objects. Let's define a song constructor:
+      </p>
+      <p>
+        <pre>
+          function Song(title, artist, album) {
+            this.title = title;
+            this.artist = artist;
+            this.album = album;
+          }
+        </pre>
+      </p>
+      <p>
+        Yup, looks just like a Ruby initialize method - but for a couple things, which we'll touch on now. Instead of <code>def</code>, we use <code>function</code>, and we need curly braces instead of <code>end</code>. Also note <code>this</code> - it's Ruby's equivalent of self (like how you say tomato, and they say tomato). Since this constructor doesn't live inside a class definition, we need to explicitly use <code>this</code> to set object properties.
+      </p>
+      <p>
+        Now that we've defined a constructor, let's use it! To create a song object, we just have to write <code>var mySong = new Song()</code>. The key here is the <code>new</code> keyword - you know what that is! But instead of using it with dot notation (i.e. <code>Song.new</code>, like in Ruby), we use it as a prefix. Just like that, we have a new song - no class needed!
+      </p>
+      <p>
+        This is JS's equivalent of a class - it's called a "prototype." Just like objects themselves, we can dynamically add new properties and methods to a prototype with the <code>prototype</code> keyword. Say we were making a music library and wanted to add a rating to each song - we simply write <code>Song.prototype.rating = 5</code> (we'll give it an average rating, but just like with objects themselves, each instance can access and change this property!).
+      </p>
+      <p>
+        There's a lot more we can do with JS objects and prototypes - even inheritance. It's a little different from Ruby but has its own strengths and weaknesses - and as you learn more and more about programming, you'll realize this is true of every language. Ruby isn't a panacea, and neither is JavaScript - part of the programmer's toolbox is knowing not only what to use, but when to use it. So go forth, and learn a new language!
+      </p>
+    </article>
+  </div>
+</main>
+

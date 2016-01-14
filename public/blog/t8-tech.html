@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+  <title>Kevin's Blog: Computer Sorting Algorithms</title>
+  <meta charset="UTF-8">    
+  <link rel="stylesheet" type="text/css" href="../css/blog.css">
+  <link href='https://fonts.googleapis.com/css?family=Raleway:100,400,700,900' rel='stylesheet' type='text/css'>
+  
+
+</head>
+
+<main>
+  <header>
+    <a href="../index.html#blog" id="homelink">Kevin's Homepage</a>
+  </header>
+  
+  <div class="container">
+    <h1>Putting Things in Order: Sorting Algorithms and Efficiency</h1>
+    <h4>August 5, 2015</h4>
+    <article>
+      <p>
+        Hey there! So you're a programmer - you take a problem, you break it down into steps, you fix it, and you always know what do. But do you know <em>how</em> all your fancy methods work? As a developer, it's important not see your arsenal of methods as "magic buttons," but rather to know the underlying algorithms at play. With that in mind, I want to talk about sorting. There's are many ways to sort a collection, with varying degrees of efficiency. But wait, you say, what else is there besides <code>.sort</code>? And I told you, that's not what I'm talking about! Underneath that simple method call is a complicated process - so let's talk about it.
+      </p>
+      <p>
+        First, let's get out of the programming world. Imagine you had a line of blocks on a table, each stamped with a number, and you have to put them in order - ascending, let's say. What would you do? If it were me, I'd probably put the first block in a new list, then take the next block and put it either before or after the first block in the new list. Then I'd take the third block and put it where it belongs, and again and again - sooner or later (probably later), I'd have a sorted list! This method - making a new list and iteratively putting each unsorted item where it belongs - is called <strong>insertion sort</strong>. But while it's easy to conceptualize, and not too hard to put into practice with your own two hands, it's not very efficient. First, we need a whole new list - that takes space. Then, for every new item, we have to place it in the new list, searching for the right spot - an expensive process in its own right (and one with has its own set of different algorithms). Then, once we find its position, we place the item - but to do so, we have to shift every item after over by 1. So it gets the job done, but requires a lot of work in both searching and shifting - with a large list, this can be a lot of work. So how can we improve?
+      </p>
+      <p>
+        First, you might think, let's scrap the new list. Let's do everything with the original list (protip: say "in-place"!). And let's not try to sort the entire list - that's too much work. Instead, let's just sort two items at a time - then all we need is a simple comparison. So, you decide, we'll just take a look at the first two items, and if they're out of order, we'll swap them. Then, let's move down the line - if the second and third items are out of order, we'll swap those! Then we'll do the third and fourth, then the fourth and fifth, on down the line until we get to the end. This way, we don't need a new list - but, after the first pass, you realize things aren't sorted at all! So you run your swapping-method again, and again, and finally you make a pass where you don't have to swap. You've finally sorted the list - but didn't that take a while too? This type of sorting, called <strong>bubble sort</strong>, is an improvement on the insertion sort, but still highly inefficient in the worst-case. If each item is only one place of out where it belongs, then it's pretty good! After one pass we'll get it all figured out. But say the lowest elememt is alllll the way at the end of the list - then, since every pass can only move an item at most one spot, we'll have to make at least as many passes as there are items on the list.For a big list - and big lists are the real tests for sorting algorithms - this can get really slow, really fast.
+      </p>
+      <p>
+        This isn't working, you say - we're making too many decisions, and not doing this fast enough. We need a quicker sort! Thankfully, we have just that - a sorting algorithm called, yes, <strong>quicksort</strong>. Quicksort goes like this: we pick an element, any element, from the list. Then, move all smaller elements before it and all larger elements after it - this can be done efficiently, becuase we only perform one comparison for each element of the list. Now we have the pivot in its correct position, and two unsorted list on either side. So we quicksort again - for each list, we pick another pivot, put the smaller elements before and the larger ones after, and end up with three elements in their correct positions, now with four smaller lists to sort. We recurse this, over and over, until the entire list is sorted! We've done it - and much more quickly, and with less effort, than our other sorting algorithms. This type of algorithm - in which we recursively sort sublists until the entire list is sorted - is called a divide-and-conquer algorithm. With every division, the smaller list gets simpler and simpler to sort - some sub-lists, gleaned from previous divions, may not need to be sorted at all. Now we're getting somewhere! Your arms, and your brain, aren't nearly as tired. This is the first of the sorting algorithms we've talked about to be actually implemented in computerized sorting methods - however, we can get even better. We'll take some of these concepts, such as dividing lists and iterating recursively, and develop our most powerful - and widely-used - sorting algorithm yet.
+      </p>
+      <p>
+        To develop our last, best sorting algorithm, let's take advantage of the fact that sorting smaller lists is easier than sorting larger lists. We'll break the list into sublists of one element each - then, for each pair of two sublists, we merge and sort. Element one is merged and sorted with element two, element three with element four, all the way down the line. Now, you say, what do we do next? The same thing again! We take two sorted lists of two elements each, and merge and sort the lists again. This, also, isn't too hard - for each element in the list we only one comparison to put it in its right spot. Say, for example, we were sorting numbers, and after our first step had the two neighboring lists <code>5,7</code> and <code>1,9</code>. First, compare 5 with 1 - 1 is smaller, so we put it into the new list first. Then we compare 5 with 9 - now 5 is smaller, so we stick 5 in second. Then it's easy to compare 7 with 9 and put them in their right spots. We end up with <code>1,5,7,9</code> after only three comparisons. And, as you might have guessed, we can do this for successively larger and larger sublists lists. Once we get lists of four, we merge and sort with a neighboring list of four - then we have lists of eight, and do the same thing - all the way until our entire list is merged. This algorithm is called <strong>mergesort</strong>, and it's the most powerful and widely-used of the ones discussed thus far. Although, on average, the computational cost is similar to quicksort, its worst-cases costs are much smaller. Additionally, unlike any of the previous methods discussed, mergesort is a "stable sort" - this means that the original order of equal-valued elements is preserved in the sorting. Thirdly - and this is really useful from a programming perspective - mergesort only requires sequential access to the elements of a list. This is useful for certain data structures, such as linked lists, where accessing a random element (such as for quicksort) has costs of its own. For all these reasons, mergesort is the bee's knees - and is probably the one your favorite programming language implements (hybridized with insertion sort for smaller lists and sublists). In the real-world implementation, try it with sorting your own numbered blocks - your arms will thank you!
+      </p>
+    </article>
+  </div>
+
+
+</main>
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+  <title>Kevin's Blog: Arrays and Hashes</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../css/blog.css">
+  <link href='https://fonts.googleapis.com/css?family=Raleway:100,400,700,900' rel='stylesheet' type='text/css'>
+  
+</head>
+
+<main>
+  <header>
+    <a href="../index.html#blog" id="homelink">Kevin's Homepage</a>
+  </header>
+
+  <div class="container">  
+    <h1>Arrays and Hashes: An Intro to Collections in Ruby</h1>
+    <h4>June 26, 2015</h4>
+    <article>
+     <p>
+        Hello again! This blog post contains (yes, I'm that cheesy) an introduction to data structures in Ruby, an important and powerful component of any programming language, and one that Ruby supercharges with the use of iterators. Arrays and Hashes are both collection objects - i.e. they're used for storing data. With these collections, you can put fold multiple objects into a single object; it's great for keeping track and working with of a set of related data all at once, and keeps code more organized. Arrays and hashes make item retrival easy with indexing, although the type of indexing is an area where these two types of collections differ. Arrays are always numerically indexed - each piece of data is mapped to an index number (which, maybe surprisingly to non-technical folk, starts at 0!). Hashes are also indexed, but are extra-powerful in that you, the programmer, can choose the indexes themselves! In fact, we don't really use the term "index" for a hash - instead we use the phrase "key-value pairs," with the hash's key analagous to the array's index. For arrays and hashes both, we can access the stored value with bracket notation - i.e. my_array[1] for the array's object index 1 (its second stored object!) and my_hash["browns"] for the value stored in the "browns" key (maybe soemthing like "tasty"). Note a key difference: while data stored in arrays has an explicit order, this is not true for hashes.
+      </p>
+      <p>
+        Make sense? Probably not - at least the nuances. So to further examine the differences in these two types of data structures, let's put them into use. Let's pretend that the thousand of extant phonebook applications don't exist, and you're the visionary who thought to first create one. Our big collection of data is phone numbers - how do we store them? First, let's agree that it would be a total hassle to make variables named phone_number_1, phone_number_2, and so on. Since we agree on that, we also agree that we should use some type of collection. But which one?
+      </p>
+      <p>
+        Let's say we start off with an array - instead of those cumbersome phone_number variables we can simply create an array called phone_numbers! It will store all of our numbers in one handy object. To add items to an array, we can do it in a few ways - first, during construction, we can say phone_numbers = ["444-5555","847-9923","632-9832"]; simply put your desired values into the array, delineated by commas, all between our handy array brackets. We can also change individual indexes (or create them) by saying things like `phone_numbers[0] = "444-5555" or phone_numbers[4] = "238-7241" (note in this case, it creates that 4th index in phone_numbers, and since we have explicit ordering it also creates a 3rd index with default value nil). We can also put new numbers onto the end of the array with array.push, for instance phone_numbers.push("633-9231"). Using all these tools, it's easy to create a collection of our desired phone numbers.
+      </p>
+      <p>
+        But wait - we forgot one thing. Phone numbers belong to people! If we use a phone-numbers array, we have to remember each numerical index for each number and just keep the number's owner stored somewhere else (or even worse, in our heads). And there's no way to back-reference - we can look at a number and say "Oh, this is John's", but if we need to know John's number, there's no way to tell! (if we need to know the 3rd number we have, then we're in luck, but why would we need to know that?) Surely there must be a better way to do this - we want something that can link the names to our numbers. You probably know where I'm going - use a hash! By storing our phone numbers in key-value pairs, we can key each number to the owner's name and get a much better (and maybe actually useful) phonebook. Try it out: like an array, we can define a hash explicitly with phone_numbers = { "John" => "444-5555", "Mary" => "847-9923"} for as many values as we need. We can also use phone_numbers - Hash.new (our hash constructor) and create new indexes with simple assignment (such as phone_numbers["Bill"] = "632-9832"). Note we cannot use push like we do for arrays, because a hash has no first and last element - it's more like a bucket. Now, our phonebook is powerful - we can always find someone's number by simply accessing the value keyed to their name, and using tools like .has_key? we can figure out if we have a person's number stored in our hash (for instance, phone_numbers.has_key?("Steve") will return true if we have Steve in our phonebook, and false if not). Whoah, call the VCs! We're on our way already.
+      </p>
+      <p>
+        So, with our test phonebook app, we can see some of the differences between arrays and hashes - and note, while the hash worked better for a phonebook, sometimes arrays work better too! (For instance, say we working with multi-dimensional mathemtical vectors - wouldn't it be better to automatically index each dimension that have to define our own keys?) But whatever you use, these collections give you powerful functionality: with tools such as the iterators .each and .map, we can access and manipulate the elements of our collections iteratively. (Side note: I know I told you hashes don't have an order, so we need to address the order in which iterators access hash values. They do this in the order you put them in!). There's a whole wealth of methods in the collections library - for instance, sort and reverse - that can help you organize your data in unforeseen, powerful ways! This was just an introcution: go forth, young coder, and check out the Ruby docs - you'll see all that collections have to offer.
+      </p> 
+    </article>
+  </div>
+
+</main>
+

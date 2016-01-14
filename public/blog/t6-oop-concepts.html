@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<head>
+  <title>Kevin's Blog: OOP in Ruby</title>
+  <meta charset="UTF-8">    
+  <link rel="stylesheet" type="text/css" href="../css/blog.css">
+  <link href='https://fonts.googleapis.com/css?family=Raleway:100,400,700,900' rel='stylesheet' type='text/css'>  
+
+</head>
+
+<main>
+  <header>
+    <a href="../index.html#blog" id="homelink">Kevin's Homepage</a>
+  </header>
+
+  <div class="container">  
+    <h1>Mixing It Up (or in): Classes and Modules in Ruby</h1>
+    <h4>July 24, 2015</h4>
+    <article>
+      <p>
+        Welcome! If you've been working in Ruby for a little bit (or reading my blog posts), you're on your way to becoming a more powerful programmer than ever. You know the methods, the iterators, the data types - you know how to split and join, you
+        know how to enumerate - you may even know how to raise exceptions! And now that you know all this, you're probably thinking of all the cool stuff you can do. You want to make new things! But what are things in Ruby? 
+      </p>
+      <p>
+        If you read last week's blog post, you know the answer - "things" are instances of classes. We know how to make our own classes, and give them state and behavior - in essence, we know how to make them behave. There are a lot of behaviors we can give objects, and sometimes, we may find ourselves creating objects with similar behaviors. We know to keep our code DRY (that is - don't repeat yourself), and there are a few ways to arrange code to make it accessible with different objects. Inheritance is a big one: a common feature of many programming languages, it allows a class of objects to inherit properties and behaviors from a more general superclass. For instance, class <code>Pencil</code> may inherit a <code>write</code> method from superclass <code>WritingImplement</code>, while its status as a subclass allows us to have more specialized methods such as <code>sharpen</code> (which, obviously, other writing implements cannot do).
+      </p>
+      <p>
+        So inheritance works in a lot of cases, and helps us arrange and classify different categories of objects we might be using in our code. Inheritance is an IS-A relationship - that is, a subclass object is a superclass object (for example, a pencil is a writing implement). So inheritance is a relationship of identity - a subclass obejct is, in the full sense, the superclass object, and it can do everything the superclass can do - with added functionality specialized to the subclass. However, sometimes we'll have a set of methods over similar classes that don't exactly belong in a superclass - for instance, there isn't a perfect IS-A relationship, but rather the methods define a role the object can play. Thankfully, we have more than superclasses to generalize behavior - this is where modules come in.
+      </p>
+      <p>
+        To start, let's work through an example. Let's say we wanted to create a program to model the animal kingdom (or a small subset). Why? Because animals are cool. You're probably already thinking of the class hierarchy here - we'll have an animal superclass, with the three behaviors common to every animal: eating, sleeping, and.... mating! It'll probably have some attributes too, like color and type of skin (fur, scales, hide, etc.). Let's get it started:
+      </p>
+      <p>
+        <pre>
+          class Animal
+            attr_reader :color, :skin_type
+
+            def initialize(color, skin_type)
+              @color = color
+              @skin_type = skin_type
+            end
+
+            def eat
+              puts "omnomnomnomnom..."
+            end
+
+            def sleep
+              puts "Zzzzzz...."
+            end
+
+            def mate
+              puts "I love you, darling."
+            end
+          end
+        </pre>
+      </p>
+      <p>
+        So now we have an animal! Note that it's not really important what the methods do for this example - your animals can eat, sleep, and mate in whatever way you'd like. But now that we have an animal we realized - what does it mean to instantiate an animal? Nothing - there's no living thing in the world where "animal" is the most specific identifier! There are dogs, cats, lions, tigers, and bears, but nothing that just an animal. In programming parlance, it's what's called an "abstract" class - it's not meant to be instantiated, but to provide a framework of common characteristics for more concrete subclasses. So, for our code, we don't want just Animal, we want real animals! Let's make them: 
+      </p>
+      <p>
+        <pre>
+          class Dog < Animal
+            def bark
+              puts "Barkbarkbark!"
+            end
+          end
+
+          class Cat < Animal
+            def meow
+              puts "meowwwww"
+            end
+          end
+
+          class Giraffe < Animal
+            def eat
+              puts "chompchompchompchomp"
+            end
+          end
+
+          class Tiger < Animal
+            def roar
+              puts "Roooaarrrr!"
+            end
+
+          end
+
+          class Pig < Animal
+            def look_for_truffles
+              puts "ffsshshsffs"
+            end
+          end
+        </pre>
+      </p>
+      <p>
+        Now we have five real animals: a dog, a cat, a giraffe, a tiger, and a pig. These class definitions obviously aren't complete - we probably need some attributes too! But you don't want to be here all day, and there's enough to unpack already. Notice how now, each animal has specific behaviors - a dog can park, a tiger can roar, and so on. Notice how <code>giraffe</code> has its own <code>eat</code> method - this is called overriding. Since a giraffe doesn't really nom but instead chomps on leaves, we create an eat method specific to a giraffe. All others, since their methods aren't overridden, will eat in the normal animal way, just nomming away. So we have five animals: each can do their own thing, and all can eat, sleep and mate (although a giraffe eats in its own way). That's inheritance in a nutshell: these specific behaviors inherit general behaviors from animal, because each one <em>is an</em> animal.
+      </p>
+      <p>
+        Now we know that animals can be more than just animals - sometimes they can be friends! Most of the time this is called a "pet" - so, if we think about it, a pet is a role an animal can play. So how do we model pet behavior, in light of both not an exact IS-A relationship and the limits of single inheritance? Drumroll please.... modules! 
+      </p>
+      <p>
+        A "pet," or any role an object can play, can be modeled a module - a set of methods and attributes, not meant to be instantiated by itself, but to be mixed in to other clases which can take on that role. Let's just go for it and then we'll explain it - here's our pet module:
+       </p>
+       <p>
+        <pre>
+          module Pet
+            attr_reader :owner
+
+            def play
+              puts "Play with me!"
+            end
+          end
+        </pre>
+      </p>
+      <p>
+        It's a simple module, so far - as an exercise, think about what else a pet might do! But this lets us assign any class (or instance thereof) the pet module, giving it an owner and the ability to play. So how do we use these? With the <code>include</code> keyword - putting include 'Pet' in the method definition will give that class all the states and behaviors of a pet. Since dog's are man and woman's best friend, let's include it there:
+      </p>
+      <p>
+        <pre>
+          class Dog < Animal
+            include 'Pet'
+          
+            def bark
+              puts "Barkbarkbark!"
+            end
+          end
+        </pre>
+      </p>
+      <p>
+        Now, for any dog object, we can call <code>dog.play</code>, and it'll act like a pet. We've successfully created and included a module! This is called "mixing in." Now let's look at our other animals: giraffes and tigers aren't pets, but pigs and cats can be. These constitute sort of edge cases; we wouldn't want every pig and cat to have pet behaviors, but some might want them. Thankfully, modules don't have to depend on classes - we can also add them to specific instances! With the <code>extend</code> method, we can add a module to specific instance; so we could do something like <code>babe = Pig.new</code> and then <code>pig.extend(Pet)</code> to make babe a pet.  
+      </p>
+      <p>
+        That's it for now! Modules are an important part of the Ruby OOP toolbox - they reduce dependencies, prevent complicated class hierarches, and allow you to share code and keep DRY. Now go try them yourself!
+      </p>
+    </article>
+  </div>
+</main>
+

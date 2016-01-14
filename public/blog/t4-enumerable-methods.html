@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<head>
+  <title>Kevin's Blog: Enumberable#Cycle in Ruby</title>
+  <meta charset="UTF-8">    
+  <link rel="stylesheet" type="text/css" href="../css/blog.css">
+  <link href='https://fonts.googleapis.com/css?family=Raleway:100,400,700,900' rel='stylesheet' type='text/css'>  
+
+</head>
+
+<main>
+  <header>
+    <a href="../index.html#blog" id="homelink">Kevin's Homepage</a>
+  </header>
+
+  <div class="container">  
+    <h1>Over and Over Again: Cycling Through Enumerables in Ruby</h1>
+    <h4>July 8, 2015</h4>
+    <article>
+      <p>
+        Have you ever watched a movie so good that the moment it finishes, you want to watch it again? Ever think, "Man, that burger was so good, I could have eaten two?" Ever had SO MUCH FUN iterating through a Ruby collection that you want to do it again?
+      </p>
+      <p>
+        No, you say? That's weird. But even if you've never been swept off your feet by Ruby iteratives (I'm sorry about that), you may occasionally find that you need to iterate through a collection more than once. Easy, you say? Just put the iterator in a loop? You COULD do that - but it's not very sleek. Don't code more than you need to - instead, get to know the Enumberable method <code>cycle</code>.
+      </p>
+      <p>
+        First, check out <code>Enumerable#cycle</code> in the <a href="http://ruby-doc.org/core-2.2.2/Enumerable.html#method-i-cycle">Ruby docs</a>. Not very helpful, right? Welcome to the Ruby docs. In plain speaking, what cycle does is cycle (surprise) through an array - that is, it calls .each, and once it passes through the entire array goes back to the first element. You can pass it an argument to set the number of cycles - for instance, <code>(1..5).cycle(10) { |i| puts i }</code> will print the numbers 1 to 5 10 times. You can also call <code>cycle</code> without an argument, in which case it will cycle forever. In this case, it's up to you to stop the cycle somehow - so put a <code>break</code> in there, or get ready to wait a long time. During each cycle, the code block behaves as if it were passed to .each. Therefore, you can't  edit elements in a collection during cycle - well, you can try, but they'll be discarded on the next run-through. This makes sense; if you want to change an element then change it again on the next cycle, why not just make both changes in one? Use <code>cycle</code> not like <code>map</code>, but like <code>each</code>, where you want each to run more than once.
+      </p>
+      <p>
+        "That's cool," you're telling me, "but I can't imagine when I would ever use it." Thankfully I can! To see cycle in action, imagine you were asked to print out each invidual day in the format [Day of Week], [Month] [Day] (e.g. Wednesday, July 8) for the past 5 years. Pretend you didn't know <code>cycle</code> - how would you do this? With a headache, that's how. But using cycle, we can easily go through each day, resetting for each month, and after December, go back to January for the new year. Check it out; first, let's just make collections of the days of the week and months. Since the number of days per month isn't uniform, let's make a hash with the each month keyed to its number of days (ignoring leap years, and pretending January 1st 5 years ago was a Monday, because why not):
+      </p>
+      <p>
+        <pre>
+          months = {
+            January: 31,
+            February: 28, 
+            March: 31,
+            April: 30,
+            May: 31,
+            June: 30,
+            July: 31,
+            August: 31,
+            September: 30,
+            October: 31,
+            November: 30,
+            December: 31
+          }
+
+          days_of_week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        </pre>
+      </p>
+      <p>
+        Now, we have everything we need - cycle will do the rest. Let's think about how to approach this - first, we know we want to print 5 years, so let's cycle through <code>months</code> 5 times. We write <code>months.cycle(5) { |month, days| }</code> - but what else goes inside? Let's treat the cycle now like <code>each</code> - so, for each month, what do we want to do? Print out each day of week, then the month, then the day number. Thankfully we have a handy <code>days_of_week</code> array - let's cycle through it! But we don't know how many times we want to cycle through - some months are 4 weeks, some are a little more, and we can't cycle through half a time. So now, we get to use cycle without an argument! This way, you can see both uses - good example, right?
+      </p>
+      <p>
+        Let's figure out how to cycle through days_of_week. We want our cycle to stop (i.e. <code>break</code>) on the last day of the month - we also need to print out the date, so for each month let's initialize a <code>day_counter</code> and set it to 1. Then, each time we print, we can increment the day counter, and we know to break if the day counter is higher than that month's number of days. This is a simple if-test; we write:
+      </p>
+      <p>
+        <pre>
+          if day_counter > days_in_month
+            break
+        </pre>
+      </p>
+      <p>
+        But as long as we're still under the number of days for that month, we have all the info we need to print each day. You know how to print as well as I do; let's write <code>else puts day_of_week.to_s+", "+month.to_s+" "+day_counter.to_s</code> (Remember to_s? day_of_week is a string, month is a symbol, and day_counter is an integer, so if we want to print them we need to cast them all to strings). Don't forget to move the day counter up too! (Hint: <code>day_counter+=1</code>).
+      </p>
+      <p>
+        We've done it! Let's put these disparate parts together to get our entire program:
+      </p>
+      <p>
+        <pre>
+          months = {
+            January: 31,
+            February: 28, 
+            March: 31,
+            April: 30,
+            May: 31,
+            June: 30,
+            July: 31,
+            August: 31,
+            September: 30,
+            October: 31,
+            November: 30,
+            December: 31
+          }
+
+          days_of_week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+
+          months.cycle(5) { |month, days_in_month|
+            day_counter = 1
+            days_of_week.cycle { |day_of_week|
+                if day_counter > days_in_month
+                  break
+                else puts day_of_week.to_s+", "+month.to_s+" "+day_counter.to_s
+                  day_counter += 1
+                end
+            }
+          }
+        </pre>
+      </p>
+      <p>
+        That's it - try running it yourself! See how we use cycles - for five years, we cycle through <code>months</code> 5 times, and cycle through the days of the week as many times as we need, stopping with a <code>break</code> statement. That's just the tip of the iceberg with cycle - it's useful in tons of situations, and is critical for any collection you might need to "roll over". That's it for today - go forth, and try it out yourself!
+      </p>
+    </article>
+  </div>
+
+</main>
+

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+  <title>Version Control with git and GitHub</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../css/blog.css">
+  <link href='https://fonts.googleapis.com/css?family=Raleway:100,400,700,900' rel='stylesheet' type='text/css'>
+  
+</head>
+
+<main>
+  <header>
+    <a href="../index.html#blog" id="homelink">Kevin's Homepage</a>
+  </header>
+  
+  <div class="container">
+    <h1>Version Control: Your Real-Life Undo Button</h1>
+    <h4>June 12, 2015</h4>
+    <article>
+      <p>
+        Have you ever gotten a terrible haircut? Accidentally divulged a close friend's secret? Said the wrong thing to a pretty girl? Don't you sometimes wish you could just "roll it back," and undo the many mistakes we all seem to make on a daily basis?
+      </p>
+      <p>
+        Unfortunately, as part of its unfathomable beauty, life just isn't like that. But software development is! It's time for the introduction to version control: a way to efficiently track and manage the evolution of your projects.  
+      </p>
+      <p>
+        If you're like me, when you a write a program, you just go and write it. You look at the project's requirements, you sit down, and you pump it out. And it's never perfect! While frustrating, with this first trial run you get to see what about the project might be easy, what might be difficult, what you know how to do, and what you need to learn. Needless to say, this first draft, or version (let's call it a "version" hereafter for maximum learning panache), is never the final version. In fact, there may be many versions of your project in between your first and your final, and it's good practice to have all of these for reference. As a project evolves, it increases in complexity, and software patterns must evolve in turn. You may try some methods in an earlier version which you later abandon, only to realize that in fact that particular method was the right one to use! Unfortunately, in a complex project over multiple work sessions and multiple files, even a million "undo" commands won't get you back to where you need to be.
+      </p>
+      <p>
+        You know what will? Version control software. Many programs have been developed to track changes in files or a directories, allowing you to see what specific changes are being made, see files affected with each new save (or "commit" - we'll get to that), and check out and even roll back to earlier versions if needed. One of the titans of version-control is git - local software that allows you to gitifize certain files and directories, which gitifizing means that you can double check changes before saving a new version of a directory, branch off from that directory to create a new, test copy to tinker with without affecting the working files, and merge different branches to bring all the good stuff into a working, "master" directory. That's a lot to digest, so let's make it simple in two ways; we'll put the process in layman's terms, then give a little primer to the technical ones.
+      </p>
+      <p> 
+        So, for those who haven't previously used git, here's what it does: given a folder created with git, git allows you to look at every version of a folder, subfolders, and contained files, from creation to present. Any change you've ever made (as long as you've saved them), right at your fingertips. Folders with git are like the aliens in Slaughterhouse-Five: you can see not only how they are, but how they used to be all the way back to their creation, all in one place and at one time. The analogy stops insofar as you can't see your project's futures; but if you could, what'd be the fun in making them?
+      </p>
+      <p>
+        To access this El Dorado of software development evolution, simply install git on your command line. All git operations start with "git" (whoda thunk?), and some key commands include:
+      <ul>
+      <li>
+        clone - clones a repository (i.e. directory) from the given source into the current working directory and prepares it for version control
+      </li>
+      <li>
+        checkout - go to (or create) a new branch for that directory - you can make changes and try out whatever you want without affecting the parent branch!
+      </li>
+      <li>
+        merge - merge current branch with the branch given as argument. Say you've made some nice changes in a new banch and want to use them for your project - merge them back with master!
+      </li>
+      <li>
+        status - Check changes you've made! Git will list the files that have been modified and state whether they are ready for commit (i.e. saving)
+      </li>
+      <li>
+        add - Add files to be committed! If git says certain files have been changed and you like the changes, use add with the file or directory path as argument to prime it for commit
+      </li>
+      <li>
+        commit - Save your changes! With a commit git creates a new version (so, to put it all together, commit points are the save/rollback points for your project). It's best practice to include a commit message with each commit to state the changes being made - do this with commit -m "Message here". -m is an option that includes a message! You can also use commit -v to open Sublime and type your commit message there.
+      </li>
+      <li>
+        push - "push" lets you send your gitified folder somewhere else - locally, online, whatever. In a shared project (which is where git really shines), after making changes locally you'll want to push them to a shared repository, where your coworkers can then look at the changes you've made and decide whether to "pull" them into the project as a whole.
+      </li>
+      </ul>
+      </p>
+      <p>
+        That last one we hadn't talked about yet, huh? In fact, pushing (and its sibling, pulling) is where the real beauty of git lies. By allowing you to push your tracked repositories to remote locations, you can colloborate and share work on projects with unparalleled access and efficiency. Say you and five other developers are working on a project - it's not gonna happen all on one machine, but you still need to awesome version control capabiltiies git offers. It's like we need an online, tracked repository or something.
+      </p>
+      <p>
+        Thankfully, we have just that! GitHub is a website which allows you to store online repositories - a place to put your code online, which has a myriad of benefits. For shared projects, it allows version control over multiple machines - when you are finished working, simply push your changes to a shared repository on GitHub. Your coworkers will check out these changes and if they like them, pull them in, easily implementing your changes into the master working project. And if others make changes, it's easy to fetch those changes on GitHub so you're always working with your project's most up-to-date copy. This allows you, and your coworkers, to all stay working on the same version, work without worrying about breaking connections with other people's code, and keep the same project running in sync over multiple machines. Another bonus: If you want to be part of the open-source community, GitHub is a vast hub for both sharing your code with the public and checking out other people's cool creations. If you happen to be checking out an open-source application you like and find a bug, you can even fix the bug yourself, push your changes, and see if the creator wants to implement them!
+      </p>
+      <p>
+        So now that you know about git and GitHub, there's no excuse not to use it - it's easy to learn and makes your project so much more efficient to manage. Your mistakes can be rolled back and a good idea is never lost, with proper git technique and practices. There's tons more to learn, but this is enough to get started, and not just for software developers - if you're a writer, artist, journalist, or engaged in any creative endeavor, you can use git and GitHub to practice version control in your work. So git going! (Sorry, I couldn't resist!)
+      </p>
+    </article>
+  </div>
+
+</main>
+

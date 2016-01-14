@@ -6,6 +6,21 @@
   <meta charset="utf-8" />
   <link href='https://fonts.googleapis.com/css?family=Raleway:100,400,700,900' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
+
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/handlebars.js"></script>
+  <script type="text/javascript" src="js/template.js"></script>
+
+  <script id="projects-template" type="text/x-handlebars-template">
+    {{#each projects}}
+      <section class="project toc-item">
+        <span class="project-title"><a href={{this.link}}>{{this.name}}</a></span>
+        <span class="project-date">{{this.date}}</span>
+      </section>
+    {{/each}}
+  </script>
+
+
   <title>Kevin Kennis</title>
 </head>
 <body>
@@ -23,22 +38,6 @@
   </section>
 
   <section class="projects toc">
-    <section class="toc-item">
-      <span class="toc-title">Hufter</span>
-      <span class="toc-date">December 2015</span>
-    </section>
-    <section class="toc-item">
-      <span class="toc-title">PitchIt</span>
-      <span class="toc-date">October 2015</span>
-    </section>
-    <section class="toc-item">
-      <span class="toc-title">San Fransisco Rents: A Visual Report</span>
-      <span class="toc-date">October 2015</span>
-    </section>
-    <section class="toc-item">
-      <span class="toc-title">Hufter</span>
-      <span class="toc-date">December 2015</span>
-    </section>
   </section>
 
   <section class="blog toc">

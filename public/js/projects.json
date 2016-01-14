@@ -1,0 +1,32 @@
+{
+  "projects": [
+    {
+      "name": "Hufter",
+      "date": "December 2015",
+      "link": "http://thehufts.herokuapp.com",
+      "github": "http://github.com/kkennis/hufter",
+      "img": ""
+    },
+    {
+      "name": "PitchIt",
+      "date": "October 2015",
+      "link": "http://gopitchit.herokuapp.com",
+      "github": "http://github.com/thepitch",
+      "img": ""
+    },
+    {
+      "name": "San Francisco Rents: A Visual Report",
+      "date": "October 2015",
+      "link": "http://sfrents.herokuapp.com",
+      "github": "http://github.com/kkennis/sfrents-express",
+      "img": ""
+    },
+    {
+      "name": "TeamUp",
+      "date": "September 2015",
+      "link": "http://kkennis-teamup.herokuapp.com",
+      "github": "http://github.com/kkennis/teamup",
+      "img": ""
+    }
+  ]
+}

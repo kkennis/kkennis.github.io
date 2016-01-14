@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<head>
+  <title>Kevin's Blog: Classes in Ruby</title>
+  <meta charset="UTF-8">    
+  <link rel="stylesheet" type="text/css" href="../css/blog.css">
+  <link href='https://fonts.googleapis.com/css?family=Raleway:100,400,700,900' rel='stylesheet' type='text/css'>
+  
+
+</head>
+
+<main>
+  <header>
+    <a href="../index.html#blog" id="homelink">Kevin's Homepage</a>
+  </header>
+
+  <div class="container">  
+    <h1>Do You Model? Classes in Ruby Do</h1>
+    <h4>July 15, 2015</h4>
+    <article>
+      <p>
+        Hello still-young-but-ever-maturing Rubyist! Before we talk about the weather or what you did last night, I want to know if you've realized the usefulness of the built-in objects Ruby gives you. Need to work with numbers? Integer and float (for those more exacting types) will take care of you! Need to store your data? Ruby's data structures can help keep your infomation organized and easily accessible! If you want to send a message, the friendly string will take care of you.
+      </p>
+      <p>
+        However, sometimes the Ruby starter objects just won't do it. It's Ok, Ruby, it's not you - our programmer just needs a little more sometimes. Thankfully, programmer, there's a way to dress Ruby up. Using classes can help you create objects of a new type, with their own attributes and methods. This, in fact, is one of the cornerstones of the object-oriented programming paradigm (which Ruby follows): we can think about Ruby in nouns. Want to make something? Make a class for it! For a poker game, for instance, we can make a Deck class which contains Card objects (Card being its own new class), where each card stores a string for rank and suit, as well as a possible integer for value (for those pesky face cards). See how we build the Card object up from primitive types, then built the Deck out of Card objects? We built it from the ground-up, so to speak, and in fact, all Ruby objects can be built this way! The <code>class</code> keyword is used to define a new class: let's see it in action:
+      </p>
+      <p>
+        <pre>
+          class Card
+          end
+        </pre>
+      </p>
+      <p>
+        We've defined a card class! But it doesn't do much right now - in fact, it does nothing. To make it cool, we have to give it both behavior and state. State can be defined in terms of variables - objects which belong to the class and define the characteristics of an instantiated object. Let's give the Card some state, and then we'll unpack it:
+      </p>
+      <p>
+        <pre>
+          class Card
+            @@type = "Bicycle"
+            @suit = nil
+            @rank = nil
+          end
+        </pre>
+      </p>
+      <p>
+        There we go - now we know a little bit about the card. Note how variables inside a class are defined with a @. Stop right there, you're saying, that @@type variable has two @s! Ok, now that we're stopped, I'll explain the difference: a variable defined with @@ is a class variable - that is, it belongs to the class, and is the same for every object belonging to that class. Since Bicycle cards are the only choice for the discerning card player, we used the <code>@@type</code> variable to make sure all objects of the card class are Bicycle cards. @, on the other hand, defines an instance variable - it's a characteristic that every Card has, but they need not be the same for each Card. Every card has a rank and suit, but the Queen of Hearts is different from the Four of Diamonds, so we store those characteristice (i.e. what defines the object's state) in our instance variables.
+      </p>
+      <p>
+        But, you may ask, <em>how</em> do we store them? In fact, our class definition isn't complete - we need a method called initialize, which tells Ruby how to make a new instance of that class. Without it, we can't make cards, so our class isn't very useful. Let's add an initialize method:
+      </p>
+      <p>
+        <pre>
+          class Card
+            @@type = "Bicycle"
+            @suit = nil
+            @rank = nil
+
+            def initialize(rank, suit)
+              @rank = rank
+              @suit = suit
+            end
+          end
+        </pre>
+      </p>
+      <p>
+        Pretty easy to tell what it does, right? Given the rank and suit passed as argument, it gives those values to a new card. The initialize method is what runs when we create the object using .new - so, if we write <code>new_card = Card.new("Six","Clubs")</code>, initialize will run and <code>new_card</code> will point to an object with a rank of "Six" and suit of "Clubs." Useful! And now that our card has state, we want to use it, right? Thankfully, there's a great way to read the state of an object - <code>attr_reader</code>! 
+      </p>
+      <p>
+        <code>attr_reader</code> works like this: if we add <code>attr_reader :suit</code> to our code, we now have an easy way to access the card's suit. All we need to do is use dot notation with our object variable - so in our case, <code>new_card.suit</code> will return "Clubs". We can do the same thing for :rank too! Nifty. Note how we used the symbol notation (i.e. colon prefix) for our attr_reader - you want to do this too. Beyond reader, we can also add an attr_writer in the same way as an attribute reader, to easily modify the value of that attribute! If we added one than wrote <code>new_card.suit = "Blargs"</code>, our new card would then be the Six of Blargs. It doesn't make sense to change the suit of a card once it's been created, so we won't have that in our class definition - but it's good to know. Even better to know: attr_accessor, e.g. <code>attr_accessor :suit</code> will give you writer and reader capabilities together! Now that we know the attr_ methods, let's add them to our card class:
+      </p>
+      <p>
+        <pre>
+          class Card
+            @@type = "Bicycle"
+
+            attr_reader :rank, :suit
+
+            def initialize(rank, suit)
+              @rank = rank
+              @suit = suit
+            end
+          end
+        </pre>
+      </p>
+      <p>
+        Note that we deleted the initial nil references to our instance variables - we didn't actually need these, but they were included so you could see how an instance variable is defined. If we define the instance variables in <code>initialize</code> and add some attr_ methods, that's all we really need. We can also add more methods to a class definition - these will define what the object can do (i.e. its behavior). There's not much we need a Card to do, so let's move to a Deck class. We know a deck will have 52 cards, so we give each deck an instance variable which contains an array of 52 Card objects. This also shows us how we can use user-generated classes inside user-generated classes - the power is in your hands! I digress - check out Deck:
+      </p>
+      <p>
+        <pre>
+          class Deck
+
+            def initialize()
+              @cards = []
+              # Some code to generate 52 cards and populate the @cards array here
+            end
+          end
+        </pre>
+      </p>
+      <p>
+        We want the Deck to do things - shuffle, for one, so we can play real games of chance. Another good method might be to draw the top card from the deck and return it. We'll write those now. Note that for Deck, we don't have any attr_ methods, so we can't directly access or modify the deck. Why? Because that'd be cheating, you lousy tinhorns!
+      </p>
+      <p>
+        <pre>
+          class Deck
+
+            def initialize()
+              @cards = []
+              # Some code to generate 52 cards and populate the @cards array here
+            end
+
+            def shuffle
+              @cards.shuffle()
+            end
+
+            def draw_card
+              @cards[0]
+            end
+          end
+        </pre>
+      </p>
+      <p>
+        Now, we can shuffle the deck, and draw the top card. Note that since the cards are stored in an array, we can use the handy Enumerable method shuffle to do all of our shuffling. But you might think that if if we had a Deck <code>new_deck</code>, and some handy attr_accessors, we could just write new_deck.cards.shuffle(). And we could - but it would also open the @cards array up to non-shuffling manipulations! That wouldn't be cool. So we make our cards only manipulable through a Deck method, in effect hiding the inner @cards away from the user. This is a common technique called encapsulation, and is very useful for protecting data you have stored inside your classes. So, to practice good encapsulation, we have <code>shuffle</code>. <code>draw_card</code>, then, does just that - it returns the top card in the deck, which we define as the first element stored int he @cards array.
+      </p>
+      <p>
+        Now we have a Card, a Deck, and they can do things! And in no time at all, it seemed like. The possibilities for improving these classes are endless, and you can try them yourself. For our cards, for instance, we might want to map our rank to a numerical value for games like War, where the highest card wins - with a value attribute, we can tell Ruby that a "Queen" is higher than a "Jack". For our Deck, we could add a method that deals hands - maybe pass it an argument for number of players (call it p) and number of cards (call it n) in each hand, then return an array that itself contains
+        p arrays of n cards each. For the really ambitious, try making a game! Start with something simple like War or Go Fish, and create a new class for the game! That class may have some player objects, and a Deck object, with Card objects in the Deck - it's classes all the way down. The best part is it's up to you! Using classes, your objects can be and behave any way you want. Go try it!
+      </p>
+    </article>
+  </div>
+
+</main>
+
