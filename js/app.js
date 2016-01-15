@@ -3,20 +3,15 @@ $(document).ready(function(){
 
   $('li').click(function(event){
     event.preventDefault();
+    var self = this;
 
     if (parseInt($('.landing').css('top'),10) >= 15){
       slideTitleUp();
-    }
-
-    $('li').removeClass('italic');
-    $(this).addClass('italic');
-
-    var sectionClass = '.' + $(this).attr('class').match(/^(.+)-nav/)[1];
-
-    $('.page').hide();
-    $(sectionClass).show();
-    if (sectionClass === '.projects' || sectionClass === '.blog'){
-      drawDots(sectionClass);
+      setTimeout(function(){
+        switchTab(self);
+      }, 1000);
+    } else {
+      switchTab(self);
     }
   });
 });
@@ -48,13 +43,20 @@ function drawDots(section){
 }
 
 function switchTab(context){
+  $('li').removeClass('italic');
+  $(context).addClass('italic');
 
+  var sectionClass = '.' + $(context).attr('class').match(/^(.+)-nav/)[1];
+
+  $('.page').hide();
+  $(sectionClass).show();
+  if (sectionClass === '.projects' || sectionClass === '.blog'){
+    drawDots(sectionClass);
+  }
 }
 
 function slideTitleDown(){
-  var height = window.innerHeight;
-  var titleHeight = $('.landing').height();
-  var slideHeight = height / 2 - titleHeight;
+  var slideHeight = getSlideHeight();
 
   $('.landing').animate({
     top: "+="+slideHeight
@@ -62,12 +64,15 @@ function slideTitleDown(){
 }
 
 function slideTitleUp(){
-  var height = window.innerHeight;
-  var titleHeight = $('.landing').height();
-  var slideHeight = height / 2 - titleHeight;
+  var slideHeight = getSlideHeight();
 
   $('.landing').animate({
     top: "-="+slideHeight
   }, 1000);
+}
 
+function getSlideHeight(){
+  var height = window.innerHeight;
+  var titleHeight = $('.landing').height();
+  return height / 2 - titleHeight;
 }

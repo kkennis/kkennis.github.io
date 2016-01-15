@@ -21,6 +21,9 @@ $(document).ready(function(){
   })
 })
 
+function loadJSON(section){
+}
+
 
 // F-Y Shuffle, from the internet
 function shuffle(array) {
