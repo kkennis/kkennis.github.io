@@ -1,6 +1,12 @@
 $(document).ready(function(){
+  slideTitleDown();
+
   $('li').click(function(event){
     event.preventDefault();
+
+    if (parseInt($('.landing').css('top'),10) >= 15){
+      slideTitleUp();
+    }
 
     $('li').removeClass('italic');
     $(this).addClass('italic');
@@ -11,8 +17,6 @@ $(document).ready(function(){
     $(sectionClass).show();
     if (sectionClass === '.projects' || sectionClass === '.blog'){
       drawDots(sectionClass);
-    } else if (sectionClass === '.photos') {
-      loadPhotos();
     }
   });
 });
@@ -31,18 +35,39 @@ function drawDots(section){
     var dots = title.next().width(itemWidth);
 
     var count = 0;
+    var dotPainter;
 
     if (dots.is(':empty')){
-      var dotPainter = setInterval(function(){
+      dotPainter = setInterval(function(){
         dots.append($('<span> . </span>'));
         count++;
-        if (count === numDots) clearInterval(dotPainter);
+        if (count >= numDots) clearInterval(dotPainter);
       });
     }
-
   });
 }
 
-function loadPhotos(){
+function switchTab(context){
+
+}
+
+function slideTitleDown(){
+  var height = window.innerHeight;
+  var titleHeight = $('.landing').height();
+  var slideHeight = height / 2 - titleHeight;
+
+  $('.landing').animate({
+    top: "+="+slideHeight
+  }, 1000);
+}
+
+function slideTitleUp(){
+  var height = window.innerHeight;
+  var titleHeight = $('.landing').height();
+  var slideHeight = height / 2 - titleHeight;
+
+  $('.landing').animate({
+    top: "-="+slideHeight
+  }, 1000);
 
 }

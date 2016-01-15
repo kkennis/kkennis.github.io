@@ -1,0 +1,27 @@
+* {
+  font-family: 'Libre Baskerville', serif;
+  color: #333333;
+  background-color: #EEEEEE;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 700;
+}
+
+header {
+  text-align: right;
+}
+
+.container {
+  width: 600px;
+  margin: auto;
+}
+
+article p {
+  text-align: justify;
+}
+
+h1, h4 {
+  text-align: center;
+}

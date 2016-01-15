@@ -8,7 +8,7 @@
   <link rel="stylesheet" type="text/css" href="css/index.css">
 
   <script type="text/javascript" src="js/jquery.min.js"></script>
-  <script type="text/javascript" src="js/jquery.endless-scroll.js"></script>
+  <script type="text/javascript" src="js/jquery.unveil.js"></script>
   <script type="text/javascript" src="js/handlebars.js"></script>
   <script type="text/javascript" src="js/template.js"></script>
   <script type="text/javascript" src="js/app.js"></script>
@@ -36,7 +36,7 @@
   <script id="photos-template" type="text/x-handlebars-template">
     {{#each photos}}
       <li>
-        <img src="images/{{link}}" />
+        <img src="img1.jpg" data-src="images/{{link}}" />
         <p class="italic">{{caption}}</p>
       </li>
     {{/each}}
@@ -47,16 +47,18 @@
 </head>
 <body>
   <div class="container">
-    <header>
-      <h1>Kevin Kennis</h1>
-      <h3>Technology, literature, travel, California</h3>
-    </header>
-    <ul class="nav">
-      <li class="projects-nav nav-item">Projects</li>
-      <li class="blog-nav nav-item">Blog</li>
-      <li class="photos-nav nav-item">My World</li>
-      <li class="about-nav nav-item">About</li>
-    </ul>
+    <div class="landing">
+      <header>
+        <h1>Kevin Kennis</h1>
+        <h3>Technology, literature, travel, California</h3>
+      </header>
+      <ul class="nav">
+        <li class="projects-nav nav-item">Projects</li>
+        <li class="blog-nav nav-item">Blog</li>
+        <li class="photos-nav nav-item">My World</li>
+        <li class="about-nav nav-item">About</li>
+      </ul>
+    </div>
 
     <section class="projects toc page">
     </section>
@@ -69,6 +71,13 @@
     </section>
 
     <section class="about page">
+      <img src="images/profilepic.jpeg" alt="A Picture of Me" />
+      <p>
+        My name is Kevin Kennis, and I'm a lover of travel, the Bay Area, good books, national parks, technology, the future, intense conversations, good jokes, outrageous, descriptive words, ramen, the San Francisco Giants, and the California coast.
+      </p>
+      <p>
+        I'm a tech guy who loves making things with computers (sadly, I wasn't born to be an oil painter). I have a number of projects in various stages, of various scopes, with various team sizes. I'm a UCLA Applied Math grad and a Dev Bootcamp alumnus, who thinks the future is machine learning, connected cars, IoT, and brain interfacing. If you want to make something with me, I'm into it - let me know!
+      </p>
     </section>
 
     <footer class="contact">

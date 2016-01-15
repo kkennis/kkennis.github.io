@@ -9,6 +9,14 @@
   margin: auto;
 }
 
+.landing {
+  position: relative;
+}
+
+img {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+}
+
 header {
   text-align: center;
 }
@@ -94,5 +102,21 @@ header h3 {
   margin: auto;
   display: block;
   width: 80%;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+}
+
+.about img {
+  margin-top: 2em;
+  border-radius: 5px;
+  width: 33%;
+}
+
+.about {
+  text-align: center;
+}
+
+.about p {
+  width: 60%;
+  padding: 1em;
+  margin: auto;
+  text-align: justify;
 }

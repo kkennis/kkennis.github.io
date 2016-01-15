@@ -1,6 +1,13 @@
 {
   "projects": [
     {
+      "name": "Personal Website",
+      "date": "January 2016",
+      "link": "http://kevinkennis.com",
+      "github": "http://github.com/kkennis/kkennis.github.io",
+      "img": ""
+    },
+    {
       "name": "Hufter",
       "date": "December 2015",
       "link": "http://thehufts.herokuapp.com",

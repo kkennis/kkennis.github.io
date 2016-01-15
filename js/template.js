@@ -16,6 +16,8 @@ $(document).ready(function(){
     data["photos"] = shuffle(data["photos"]);
     var compiledHTML = Handlebars.compile(photosTemplate)(data);
     $('.photos ul').html(compiledHTML);
+    $('img').unveil(200);
+    $('img').trigger('unveil');
   })
 })
 
