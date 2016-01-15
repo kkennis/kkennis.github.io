@@ -5,6 +5,7 @@
   <meta charset="utf-8" />
   <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/icons.css">
   <link rel="stylesheet" type="text/css" href="css/index.css">
 
   <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -19,6 +20,7 @@
         <span class="toc-title"><a href={{link}}>{{name}}</a>&nbsp;&nbsp;</span>
         <span class="dots"></span>
         <span class="toc-date">{{date}}</span>
+        <p class="project-desc">{{desc}}</p>
       </section>
     {{/each}}
   </script>
@@ -47,7 +49,7 @@
 </head>
 <body>
   <div class="container">
-    <div class="landing">
+    <section class="landing">
       <header>
         <h1>Kevin Kennis</h1>
         <h3>Technology, literature, travel, California</h3>
@@ -58,7 +60,7 @@
         <li class="photos-nav nav-item">My World</li>
         <li class="about-nav nav-item">About</li>
       </ul>
-    </div>
+    </section>
 
     <section class="projects toc page">
     </section>
@@ -72,16 +74,23 @@
 
     <section class="about page">
       <img src="images/profilepic.jpeg" alt="A Picture of Me" />
-      <p>
+      <p class="about-text">
         My name is Kevin Kennis, and I'm a lover of travel, the Bay Area, good books, national parks, technology, the future, intense conversations, good jokes, outrageous, descriptive words, ramen, the San Francisco Giants, and the California coast.
       </p>
-      <p>
+      <p class="about-text">
         I'm a tech guy who loves making things with computers (sadly, I wasn't born to be an oil painter). I have a number of projects in various stages, of various scopes, with various team sizes. I'm a UCLA Applied Math grad and a Dev Bootcamp alumnus, who thinks the future is machine learning, connected cars, IoT, and brain interfacing. If you want to make something with me, I'm into it - let me know!
       </p>
+      <footer class="contact">
+        <p class="copyright">&copy; Kevin Kennis, 2016. All photos by me.</p>
+        <section class="icons">
+          <a href="https://github.com/kkennis"><span class="icon-github-alt"></span></a>
+          <a href="https://www.linkedin.com/in/kkennis"><span class="icon-linkedin-square"></span></a>
+          <a href="https://twitter.com/kevinvkennis"><span class="icon-twitter"></span></a>
+          <a href="resume.pdf"><span class="icon-profile"></span></a>
+        </section>
+      </footer>
     </section>
 
-    <footer class="contact">
-    </footer>
   </div>
 
 

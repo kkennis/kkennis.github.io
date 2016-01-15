@@ -5,35 +5,35 @@
       "date": "January 2016",
       "link": "http://kevinkennis.com",
       "github": "http://github.com/kkennis/kkennis.github.io",
-      "img": ""
+      "desc": "Simple HTML/CSS website showing my work, writing, and a little about me. More to come!"
     },
     {
       "name": "Hufter",
       "date": "December 2015",
       "link": "http://thehufts.herokuapp.com",
       "github": "http://github.com/kkennis/hufter",
-      "img": ""
+      "desc": "An equity market data and backtesting API written in Node.js in a functional style."
     },
     {
       "name": "PitchIt",
       "date": "October 2015",
       "link": "http://gopitchit.herokuapp.com",
       "github": "http://github.com/thepitch",
-      "img": ""
+      "desc": "Social website and iOS app for early stage businesses/products/founders. Vote on and discuss new ideas."
     },
     {
       "name": "San Francisco Rents: A Visual Report",
       "date": "October 2015",
       "link": "http://sfrents.herokuapp.com",
       "github": "http://github.com/kkennis/sfrents-express",
-      "img": ""
+      "desc": "3D extrusion graph of San Francisco rents by ZIP code over the last five years."
     },
     {
       "name": "TeamUp",
       "date": "September 2015",
       "link": "http://kkennis-teamup.herokuapp.com",
       "github": "http://github.com/kkennis/teamup",
-      "img": ""
+      "desc": "Stay up-to-date on all the best sources for all your favorite teams, all in one place."
     }
   ]
 }
