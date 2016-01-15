@@ -1,21 +1,6 @@
 $(document).ready(function(){
   ['projects', 'blog', 'photos'].forEach(loadJSON);
-
-  $.getJSON('js/blog.json', function(data){
-    var blogTemplate = $('#blog-template').html();
-    var compiledHTML = Handlebars.compile(blogTemplate)(data);
-    $('.blog').html(compiledHTML);
-  });
-
-  $.getJSON('js/photos.json', function(data){
-    var photosTemplate = $('#photos-template').html();
-    data["photos"] = shuffle(data["photos"]);
-    var compiledHTML = Handlebars.compile(photosTemplate)(data);
-    $('.photos ul').html(compiledHTML);
-    $('img').unveil(200);
-    $('img').trigger('unveil');
-  })
-})
+});
 
 function loadJSON(section){
   $.getJSON('js/' + section + '.json', function(data){
