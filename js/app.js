@@ -9,7 +9,11 @@ $(document).ready(function(){
 
     $('.page').hide();
     $(sectionClass).show();
-    drawDots(sectionClass);
+    if (sectionClass === '.projects' || sectionClass === '.blog'){
+      drawDots(sectionClass);
+    } else if (sectionClass === '.photos') {
+      loadPhotos();
+    }
   });
 });
 
@@ -39,3 +43,6 @@ function drawDots(section){
   });
 }
 
+function loadPhotos(){
+  var photos =
+}
