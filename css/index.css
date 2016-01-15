@@ -13,6 +13,10 @@ header {
   text-align: center;
 }
 
+header h3 {
+  font-style: italic;
+}
+
 ul {
   display: flex;
   margin: auto;
@@ -51,4 +55,26 @@ ul {
 
 .italic {
   font-style: italic;
+}
+
+.toc a {
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.toc a:hover {
+  color: blue;
+}
+
+.toc-item {
+  display: block;
+  width: 100%;
+}
+
+.toc-item + .toc-item {
+  margin-top: 1em;
+}
+
+.toc-date {
+  float: right;
 }
