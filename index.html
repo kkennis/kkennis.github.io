@@ -8,6 +8,7 @@
   <link rel="stylesheet" type="text/css" href="css/index.css">
 
   <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.endless-scroll.js"></script>
   <script type="text/javascript" src="js/handlebars.js"></script>
   <script type="text/javascript" src="js/template.js"></script>
   <script type="text/javascript" src="js/app.js"></script>
@@ -32,8 +33,16 @@
     {{/each}}
   </script>
 
+  <script id="photos-template" type="text/x-handlebars-template">
+    <ul>
+      {{#each photos}}
+        <li><img src="images/{{link}}" /></li>
+      {{/each}}
+    </ul>
+  </script>
 
-  <title>Kevin Kennis</title>
+
+  <title>A Kevin Kennis Phantasmagoria</title>
 </head>
 <body>
   <div class="container">

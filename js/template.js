@@ -10,4 +10,10 @@ $(document).ready(function(){
     var compiledHTML = Handlebars.compile(blogTemplate)(data);
     $('.blog').html(compiledHTML);
   })
+
+  $.getJSON('js/photos.json', function(data){
+    var imageTemplate = $('#photos-template').html();
+    var compiledHTML = Handlebars.compile(imageTemplate)(data);
+    $('.photos').html(compiledHTML);
+  })
 })
