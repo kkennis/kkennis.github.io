@@ -1,9 +1,5 @@
 $(document).ready(function(){
-  $.getJSON('js/projects.json', function(data){
-    var projectsTemplate = $('#projects-template').html();
-    var compiledHTML = Handlebars.compile(projectsTemplate)(data);
-    $('.projects').html(compiledHTML);
-  });
+  ['projects', 'blog', 'photos'].forEach(loadJSON);
 
   $.getJSON('js/blog.json', function(data){
     var blogTemplate = $('#blog-template').html();
@@ -22,10 +18,24 @@ $(document).ready(function(){
 })
 
 function loadJSON(section){
+  $.getJSON('js/' + section + '.json', function(data){
+    var template = $('#' + section + '-template').html();
+    var compiledHTML;
+
+    if (section === "photos"){
+      data["photos"] = shuffle(data["photos"]);
+      compiledHTML = Handlebars.compile(template)(data);
+      $('.' + section + ' ul').html(compiledHTML);
+      $('img').unveil(200);
+      $('img').trigger('unveil');
+    } else {
+      compiledHTML = Handlebars.compile(template)(data);
+      $('.' + section).html(compiledHTML);
+    }
+  })
 }
 
-
-// F-Y Shuffle, from the internet
+// F-Y Shuffle, from the internet, so photos are more fun
 function shuffle(array) {
   var currentIndex = array.length;
   var temporaryValue;
