@@ -15,10 +15,17 @@
 
 img {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
 }
 
 header {
   text-align: center;
+}
+
+header a {
+  text-decoration: none;
 }
 
 header h3 {
@@ -69,10 +76,16 @@ header h3 {
   text-decoration: none;
   font-weight: 700;
   transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
 }
 
 .toc a:hover {
   transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -o-transform: scale(1.05);
 }
 
 .toc-item {
@@ -109,6 +122,10 @@ header h3 {
   margin: auto;
   display: block;
   width: 80%;
+}
+
+.caption {
+  background-color: #EEEEEE;
 }
 
 .about img {
