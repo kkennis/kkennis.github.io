@@ -44,11 +44,5 @@ function drawDots(section){
 }
 
 function loadPhotos(){
-  $.getJSON('js/blog.json', function(data){
-    var imageList = data["images"];
 
-    imageList.forEach(function(image){
-
-    })
-  })
 }

@@ -17,7 +17,7 @@ header h3 {
   font-style: italic;
 }
 
-ul {
+.nav {
   display: flex;
   margin: auto;
   text-align: center;
@@ -77,4 +77,20 @@ ul {
 
 .toc-date {
   float: right;
+}
+
+.image-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.image-list li {
+  padding: 3em 1em 3em 1em;
+  border-bottom: 3px double #333333;
+  text-align: center;
+}
+
+.image-list li img {
+  width: 80%;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
 }
