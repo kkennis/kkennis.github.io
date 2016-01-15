@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/handlebars.js"></script>
+  <script type="text/javascript" src="js/template.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+
+  <script id="projects-template" type="text/x-handlebars-template">
+    {{#each projects}}
+      <section class="project toc-item">
+        <span class="toc-title"><a href={{link}}>{{name}}</a></span>
+        <span class="toc-date">{{date}}</span>
+      </section>
+    {{/each}}
+  </script>
+
+  <script id="blog-template" type="text/x-handlebars-template">
+    {{#each blog-posts}}
+      <section class="blog toc-item">
+        <span class="toc-title"><a href="blog/{{link}}">{{title}}</a></span>
+        <span class="toc-date">{{date}}</span>
+      </section>
+    {{/each}}
+  </script>
+
+
+  <title>Kevin Kennis</title>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Kevin Kennis</h1>
+      <h3>Tech, literature, travel, SF</h3>
+    </header>
+    <ul class="nav">
+      <li class="projects-nav nav-item">Projects</li>
+      <li class="blog-nav nav-item">Blog</li>
+      <li class="photos-nav nav-item">Photos</li>
+      <li class="about-nav nav-item">About</li>
+    </ul>
+
+    <section class="projects toc page">
+    </section>
+
+    <section class="blog toc page">
+    </section>
+
+    <section class="photos page">
+    </section>
+
+    <section class="about page">
+    </section>
+  </div>
+
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+* {
+  font-family: 'Libre Baskerville', serif;
+  color: #333333;
+  background-color: #EEEEEE;
+}
+
+.container {
+  width: 800px;
+  margin: auto;
+}
+
+header {
+  text-align: center;
+}
+
+ul {
+  display: flex;
+  margin: auto;
+  text-align: center;
+  padding: 0;
+  justify-content: space-around;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-top: 3px double #333333;
+  border-bottom: 3px double #333333;
+  margin-bottom: 2em;
+}
+
+.nav li {
+  display: inline;
+  list-style-type: none;
+}
+
+.page {
+  display: none;
+}
+
+.nav-item {
+  -moz-transition: all 1s;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+
+.nav-item:hover {
+  -webkit-transform: skewX(-20deg);
+  -moz-transform: skewX(-20deg);
+  -o-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+
+.italic {
+  font-style: italic;
+}
