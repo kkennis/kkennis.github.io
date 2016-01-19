@@ -1,6 +1,50 @@
 {
   "photos": [
     {
+      "link": "yosemitevalley.png",
+      "caption": "Yosemite Valley"
+    },
+    {
+      "link": "bigrocks.png",
+      "caption": "Big Tree, Bigger Rock"
+    },
+    {
+      "link": "halfsentinel.png",
+      "caption": "Sentinel Dome and Half Dome"
+    },
+    {
+      "link": "vernalfalls.png",
+      "caption": "Vernal Falls"
+    },
+    {
+      "link": "riverview.png",
+      "caption": "Yosemite Valley, River View"
+    },
+    {
+      "link": "loweryosemite.png",
+      "caption": "Lower Yosemite Falls"
+    },
+    {
+      "link": "merced.png",
+      "caption": "Merced River"
+    },
+    {
+      "link": "bumpass.png",
+      "caption": "Bumpass Hell"
+    },
+    {
+      "link": "redwoods.png",
+      "caption": "Redwoods NP"
+    },
+    {
+      "link": "ojai.png",
+      "caption": "Near Ojai"
+    },
+    {
+      "link": "ggbfog.png",
+      "caption": "Golden Gate Bridge"
+    },
+    {
       "link": "aquarium.png",
       "caption": "Chicago Aquarium"
     },
