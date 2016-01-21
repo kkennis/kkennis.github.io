@@ -101,7 +101,7 @@ header h3 {
   float: right;
 }
 
-.project-desc{
+.project-desc {
   font-size: 0.8em;
   font-style: italic;
   padding-bottom: 0.5em;
@@ -122,6 +122,14 @@ header h3 {
   margin: auto;
   display: block;
   width: 80%;
+}
+
+.image-list li:nth-child(n+6) img {
+  opacity: 0;
+  transition: opacity .3s ease-in;
+  -webkit-transition: opacity .3s ease-in;
+  -moz-transition: opacity .3s ease-in;
+  -o-transition: opacity .3s ease-in;
 }
 
 .caption {

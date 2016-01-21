@@ -11,8 +11,14 @@ function loadJSON(section){
       data["photos"] = shuffle(data["photos"]);
       compiledHTML = Handlebars.compile(template)(data);
       $('.' + section + ' ul').html(compiledHTML);
-      $('img').unveil(200);
-      $('img').trigger('unveil');
+
+      $('img').unveil(800, function() {
+        $(this).load(function(){
+          this.style.opacity = 1;
+        })
+      });
+
+      $('.image-list li:nth-child(-n+5) img').trigger('unveil');
     } else {
       compiledHTML = Handlebars.compile(template)(data);
       $('.' + section).html(compiledHTML);
