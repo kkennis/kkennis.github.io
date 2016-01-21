@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <head>
   <title>Kevin's Blog: Classes in Ruby</title>
-  <meta charset="UTF-8">    
+  <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="../css/blog.css">
-  <link href='https://fonts.googleapis.com/css?family=Raleway:100,400,700,900' rel='stylesheet' type='text/css'>
-  
+  <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic,700' rel='stylesheet' type='text/css'>
+
 
 </head>
 
@@ -13,7 +13,7 @@
     <a href="../index.html#blog" id="homelink">Kevin's Homepage</a>
   </header>
 
-  <div class="container">  
+  <div class="container">
     <h1>Do You Model? Classes in Ruby Do</h1>
     <h4>July 15, 2015</h4>
     <article>
@@ -62,7 +62,7 @@
         </pre>
       </p>
       <p>
-        Pretty easy to tell what it does, right? Given the rank and suit passed as argument, it gives those values to a new card. The initialize method is what runs when we create the object using .new - so, if we write <code>new_card = Card.new("Six","Clubs")</code>, initialize will run and <code>new_card</code> will point to an object with a rank of "Six" and suit of "Clubs." Useful! And now that our card has state, we want to use it, right? Thankfully, there's a great way to read the state of an object - <code>attr_reader</code>! 
+        Pretty easy to tell what it does, right? Given the rank and suit passed as argument, it gives those values to a new card. The initialize method is what runs when we create the object using .new - so, if we write <code>new_card = Card.new("Six","Clubs")</code>, initialize will run and <code>new_card</code> will point to an object with a rank of "Six" and suit of "Clubs." Useful! And now that our card has state, we want to use it, right? Thankfully, there's a great way to read the state of an object - <code>attr_reader</code>!
       </p>
       <p>
         <code>attr_reader</code> works like this: if we add <code>attr_reader :suit</code> to our code, we now have an easy way to access the card's suit. All we need to do is use dot notation with our object variable - so in our case, <code>new_card.suit</code> will return "Clubs". We can do the same thing for :rank too! Nifty. Note how we used the symbol notation (i.e. colon prefix) for our attr_reader - you want to do this too. Beyond reader, we can also add an attr_writer in the same way as an attribute reader, to easily modify the value of that attribute! If we added one than wrote <code>new_card.suit = "Blargs"</code>, our new card would then be the Six of Blargs. It doesn't make sense to change the suit of a card once it's been created, so we won't have that in our class definition - but it's good to know. Even better to know: attr_accessor, e.g. <code>attr_accessor :suit</code> will give you writer and reader capabilities together! Now that we know the attr_ methods, let's add them to our card class:
