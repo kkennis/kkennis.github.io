@@ -7,7 +7,7 @@ function loadJSON(section){
     var template = $('#' + section + '-template').html();
     var compiledHTML;
 
-    if (section === "photos"){
+    if (section === "photos") {
       data["photos"] = shuffle(data["photos"]);
       compiledHTML = Handlebars.compile(template)(data);
       $('.' + section + ' ul').html(compiledHTML);

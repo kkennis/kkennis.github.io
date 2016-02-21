@@ -1,6 +1,34 @@
 {
   "photos": [
     {
+      "link": "borregosunset.png",
+      "caption": "Anza-Borrego Sunset"
+    },
+    {
+      "link": "yosemiteovercast.png",
+      "caption": "Yosemite Valley, Overcast"
+    },
+    {
+      "link": "goldengatecables.png",
+      "caption": "Golden Gate Cables"
+    },
+    {
+      "link": "yosemitesunset.png",
+      "caption": "Yosemite Valley Sunset"
+    },
+    {
+      "link": "slotcanyon.png",
+      "caption": "Slot Canyon, Anza-Borrego"
+    },
+    {
+      "link": "borregosprings.png",
+      "caption": "Borrego Springs"
+    },
+    {
+      "link": "torreypines.png",
+      "caption": "Torrey Pines"
+    },
+    {
       "link": "yosemitevalley.png",
       "caption": "Yosemite Valley"
     },
