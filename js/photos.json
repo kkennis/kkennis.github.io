@@ -1,6 +1,62 @@
 {
   "photos": [
     {
+      "link": "sanjacinto.png",
+      "caption": "The Desert and Mt. San Jacinto"
+    },
+    {
+      "link": "salvationmountain.png",
+      "caption": "Salvation Mountain"
+    }
+    {
+      "link": "godislove.png",
+      "caption": "God is Love"
+    },
+    {
+      "link": "slabcity.png",
+      "caption": "Slab City"
+    },
+    {
+      "link": "grandcanal.png",
+      "caption": "Dublin Grand Canal"
+    },
+    {
+      "link": "howthharbor.png",
+      "caption": "Howth Harbor"
+    },
+    {
+      "link": "baily.png",
+      "caption": "Baily Lighthouse"
+    },
+    {
+      "link": "greenwich.png",
+      "caption": "Greenwich Observatory"
+    },
+    {
+      "link": "riverliffey.png",
+      "caption": "River Liffey"
+    },
+    {
+      "link": "samuelbeckett.png",
+      "caption": "Samuel Beckett Bridge"
+    },
+    {
+      "link": "dublingarden.png",
+      "caption": "Dubhlinn Garden"
+    },
+    {
+      "link": "apartmentview.png",
+      "caption": "At Home in the Presidio"
+    },
+    {
+      "link": "pinnacles.png",
+      "caption": "Pinnacles NP"
+    },
+    {
+      "link": "tomalesbay.png",
+      "caption": "Tomales Bay"
+    },
+    {
       "link": "borregosunset.png",
       "caption": "Anza-Borrego Sunset"
     },

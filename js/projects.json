@@ -1,6 +1,13 @@
 {
   "projects": [
     {
+      "name": "Skuchain",
+      "date": "January 2016 - Now",
+      "link": "http://skuchain.com",
+      "github": "http://skuchain.com",
+      "desc": "Building blockchain applications for international supply chains."
+    },
+    {
       "name": "Personal Website",
       "date": "January 2016",
       "link": "http://kevinkennis.com",
