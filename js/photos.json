@@ -1,6 +1,54 @@
 {
   "photos": [
     {
+      "link": "stornetta.png",
+      "caption": "Stornetta Lands"
+    },
+    {
+      "link": "bolinasridge.png",
+      "caption": "Bolinas Ridge"
+    },
+    {
+      "link": "bund.png",
+      "caption": "The Bund"
+    },
+    {
+      "link": "yugarden.png",
+      "caption": "Yu Gardens"
+    },
+    {
+      "link": "westlake.png",
+      "caption": "West Lake, Hangzhou"
+    },
+    {
+      "link": "teahoase.png",
+      "caption": "Tea House"
+    },
+    {
+      "link": "qiantang.png",
+      "caption": "River Qiantang"
+    },
+    {
+      "link": "tiogalake.png",
+      "caption": "Tioga Lake"
+    },
+    {
+      "link": "danameadows.png",
+      "caption": "Dana Meadows"
+    },
+    {
+      "link": "wildflowers.png",
+      "caption": "Wildflowers"
+    },
+    {
+      "link": "glacierpoint.png",
+      "caption": "Glacier Point"
+    },
+    {
+      "link": "pershingdr.png",
+      "caption": "Pershing Drive"
+    },
+    {
       "link": "sanjacinto.png",
       "caption": "The Desert and Mt. San Jacinto"
     },
