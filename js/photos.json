@@ -1,6 +1,74 @@
 {
   "photos": [
     {
+      "link": "turretarch.jpg",
+      "caption": "Turret Arch"
+    },
+    {
+      "link": "riograndegorge.jpg",
+      "caption": "Rio Grande Gorge Bridge"
+    },
+    {
+      "link": "whitesands.jpg",
+      "caption": "White Sands National Monument"
+    },
+    {
+      "link": "saguaro.jpg",
+      "caption": "Giant Saguaro"
+    },
+    {
+      "link": "naturalbridge.png",
+      "caption": "Natural Bridge, Bryce"
+    },
+    {
+      "link": "zioncanyon.png",
+      "caption": "Zion Canyon"
+    },
+    {
+      "link": "bryce.png",
+      "caption": "Bryce"
+    },
+    {
+      "link": "virginriver.png",
+      "caption": "Virgin River"
+    },
+    {
+      "link": "angelslanding.png",
+      "caption": "Angel's Landing"
+    },
+    {
+      "link": "antelopecanyon1.png",
+      "caption": "Antelope Canyon 1"
+    },
+    {
+      "link": "antelopecanyon2.png",
+      "caption": "Antelope Canyon 2"
+    },
+    {
+      "link": "antelopecanyon3.png",
+      "caption": "Antelope Canyon 3"
+    },
+    {
+      "link": "antelopecanyon4.png",
+      "caption": "Antelope Canyon 4"
+    },
+    {
+      "link": "antelopecanyon5.png",
+      "caption": "Antelope Canyon 5"
+    },
+    {
+      "link": "antelopecanyon6.png",
+      "caption": "Antelope Canyon 6"
+    },
+    {
+      "link": "antelopecanyon7.png",
+      "caption": "Antelope Canyon 7"
+    },
+    {
+      "link": "horseshoebend.png",
+      "caption": "Horseshoe Bend"
+    },
+    {
       "link": "stornetta.png",
       "caption": "Stornetta Lands"
     },
@@ -209,7 +277,7 @@
       "caption": "Bridal Veil Falls"
     },
     {
-      "link": "bryce.jpg",
+      "link": "bryceamphitheatre.png",
       "caption": "Bryce Canyon"
     },
     {
