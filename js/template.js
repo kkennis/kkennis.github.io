@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  ['projects', 'blog', 'photos'].forEach(loadJSON);
+  ['projects', 'blog', 'photos', 'coins'].forEach(loadJSON);
 });
 
 function loadJSON(section){
@@ -19,6 +19,8 @@ function loadJSON(section){
       });
 
       $('.image-list li:nth-child(-n+5) img').trigger('unveil');
+    } else if (section === "coins") {
+
     } else {
       compiledHTML = Handlebars.compile(template)(data);
       $('.' + section).html(compiledHTML);
