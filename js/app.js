@@ -1,4 +1,6 @@
 $(document).ready(function(){
+slideTitleDown();
+
 
   $('li').click(function(event){
     event.preventDefault();
@@ -15,12 +17,9 @@ $(document).ready(function(){
   });
 
   if (window.location.hash === '#coins') {
-    $('li.coins-nav').click();
     setTimeout(function(){
-        drawDots('.coins');
-    }, 1000);
-  } else {
-    slideTitleDown();
+        $('li.coins-nav').click();
+    }, 1100);
   }
 });
 
