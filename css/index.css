@@ -174,3 +174,21 @@ footer a {
   display: flex;
   justify-content: space-around;
 }
+
+.coins.section-header:not(:first-child) {
+    padding-top: 3em;
+    border-top: 3px double #333333;
+}
+
+.coins.footer {
+    text-align: center;
+}
+
+.coins.footer p {
+    padding-top: 3em;
+    padding-bottom: 3em;
+    border-top: 3px double #333333;
+    width: 70%;
+    margin: auto;
+    font-style: italic;
+}
