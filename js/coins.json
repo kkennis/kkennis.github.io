@@ -24,14 +24,50 @@
         "date": "Updated Often",
         "desc": "The largest bitcoin, blockchain, and cryptocurrency internet publisher. Good high-level readings on industry trends, but sort of like the Wall Street Journal - by the time a thing makes it in to Coindesk, insiders have already known about it for a while.",
         "url": "http://www.coindesk.com/"
+      },
+      {
+        "title": "Token / ICO / Blockchain Capital Markets Landscape",
+        "date": "June 2, 2017",
+        "desc": "A solid overview of the cryptocurrency landscape as it exists today. While only a few firms exist in some of these verticals today, there will be massive growth in terms of number of players in the coming years. Contains good sources for current market data, major crypto hedge funds in operation today, and market research and analysis.",
+        "url": "https://medium.com/@etiennebr/my-token-ico-blockchain-capital-markets-landscape-617e6ff1eae1"
       }
     ],
     "Analysis (Bullish)": [
+      {
+        "title": "Crypto-Investing in the Age of Whales",
+        "date": "May 31, 2017",
+        "desc": "Yet another article for the initial crypto investor. Over the past few months a number of whales, major sources of capital and market power in cryptocurrencies, have emerged, and some these players have enough holdings to push markets up and down according to their needs. For the crypto-retail investor, timing when these players make market-shifting moves will be very difficult, so it is prudent to create a disciplined plan around long-term holdings.",
+        "url": "https://bitcoinmagazine.com/articles/crypto-investing-age-whales/"
+      },
+      {
+        "title": "Crypto Tokens: A Breakthrough in Open Network Design",
+        "date": "May 31, 2017",
+        "desc": "One of the reasons crypto tokens have become so powerful is their ability to create new, directly-accessible network protocols. As tokens drive networks, participants in the network push value in the tokens. These tokens may eventually lead to \"distributed everything\" - cloud hosting, compute power, outcome predictions, and a vast array of additional use cases.",
+        "url": "https://medium.com/@cdixon/crypto-tokens-a-breakthrough-in-open-network-design-e600975be2ef"
+      },
       {
         "title": "Bitcoin Could Top $100,000 in 10 Years, Says Previously Accurate Analyst",
         "date": "May 31, 2017",
         "desc": "One of the more optimistic price predictions, but drawn from numbers. The Reasonable: Assumes crypcurrency market cap grows to 10% of forex market. The Reach: Assumes bitcoin will occupy 35% of total crypto market share (seems a little high, given 10 years' advancement).",
         "url": "https://www.cryptocoinsnews.com/bitcoin-hit-100000-10-years/"
+      },
+      {
+        "title": "One Way Blockchain Adoption Could Happen",
+        "date": "May 31, 2017",
+        "desc": "An investigation into the traditional product adoption curve's applications to blockchain. Predicts that continued adoption will be driven by the need for decentralization - decentralization, for its own sake, will become more and more highly valued and more and more capital becomes digital. Also notes an interesting fact: the average investor in crypto has around half of their invested assets in digital funds.",
+        "url": "https://medium.com/@wen_xs/one-way-blockchain-adoption-could-happen-eac384cdf1de"
+      },
+      {
+        "title": "Down the Token Rabbit Hole",
+        "date": "May 30, 2017",
+        "desc": "A narrative and self-analysis of one investor's foray into the token world. Describes the growth of altcoins from mere curiosities into 2013 into the burgeoning economies they have become today. Goes over a few successful and not-so-successful tokens, such as Augur, an early prediction market. Also talks about the ERC-20 protocol, a way to build new tokens on top of Ethereum.",
+        "url": "https://medium.com/@Disruptepreneur/down-the-token-rabbit-hole-ee2ae3c0d7b0"
+      },
+      {
+        "title": "Thoughts on Tokens",
+        "date": "May 30, 2017",
+        "desc": "A reasoned and accessible breakdown into the token economy as it stands today, and possibilities for the future. Some good introductory information into the actual technology behind blockchain and tokens. Goes from more direct applications (the idea of a token as a paid API key, or ability to utilize a service), to the wider-ranging and more abstract (disruptions of traditional VC and internet-wide identity management).",
+        "url": "https://medium.com/@balajis/thoughts-on-tokens-436109aabcbe"
       },
       {
         "title": "Is the Crypto Asset Class Finally Coming Into its Own?",
@@ -40,22 +76,52 @@
         "url": "http://www.coindesk.com/bitcoin-ethereum-ripple-crypto-asset-class-finally-coming/"
       },
       {
+        "title": "Skeptical of ICOs? Investor Vinny Lingham Can Change Your Mind With a Marker",
+        "date": "May 26, 2017",
+        "desc": "An overview and favorable perspective on the ICO phenomenon. Interviews a founder of the new coin Civic (ICO upcoming), a digital identity token. Goes over the idea of ICOs as a disruption of traditional sources of venture funding.",
+        "url": "http://www.coindesk.com/skeptical-icos-investor-vinny-lingham-can-change-mind-marker/"
+      },
+      {
         "title": "Banks Offering Cryptocurrency Services? A New Reality Is Arriving",
         "date": "May 22, 2017",
         "desc": "A Scandinavian bank is planning to debut accounts linked to cryptocurrency holdings. Right now many online exchanges/wallets are run by startups and small players, uninsured and with less-than-clear backgrounds. Large, institutional wallet providers would signify a dramatic shift towards mainstream acceptance of cryptocurrency.",
         "url": "http://www.coindesk.com/banks-offering-cryptocurrency-services-a-new-reality-is-arriving/"
       },
       {
+        "title": "4 reasons why Tezos could be the Netscape of the blockchain",
+        "date": "May 22, 2017",
+        "desc": "A marketing piece on Tezos, an upcoming cryptocurrency that claims to boost the security of smart contracts and provide secure and verified computations. Goes over some noteworthy names that have expressed interest in Tezos, as well as some of the parameters of its upcoming ICO.",
+        "url": "https://venturebeat.com/2017/05/21/4-reasons-why-tezos-could-be-the-netscape-of-the-blockchain/"
+      },
+      {
         "title": "Want to deflate the token bubble? Fix the market cap indicator.",
         "date": "May 2, 2017",
         "desc": "A breakdown on some misleading metrics displayed on most token exchanges, and a theoretical recalculation of market cap drawing on out-of-circulation tokens for each cryptocurrency. Recalculation has big implications for Ripple, a currency whose volume whose proportional circulating currency is small.",
-        "url": "https://blog.sia.tech/want-to-deflate-the-token-bubble-fix-the-market-cap-indicator-d50f7f1e1ec4"
+        "url": "https://medium.com/@Disruptepreneur/down-the-token-rabbit-hole-ee2ae3c0d7b0"
       },
       {
-        "title": "BWhy we are excited about Enterprise Ethereum Alliance: Perspectives from a crypto protocol startup",
+        "title": "Will Initial Coin Offerings Fund the Future?",
+        "date": "May 1, 2017",
+        "desc": "An exploration of a very potent idea: the disruption of traditional venture funding by the ICO market. Issuing tokens that drive a product has proven, over the past couple months, to be an effective way of raising capital for a project. Taken down the line, this could point to a very interesting future, where companies can raise money directly from users rather than taking traditional VC routes.",
+        "url": "http://versionone.vc/will-initial-coin-offerings-fund-future/"
+      },
+      {
+        "title": "Litecoin's SegWit Activation: Why it Matters and What's Next",
+        "date": "Apri 26, 2017",
+        "desc": "A rather technical article; it describes the activating of SegWit (Segregated Witness) in Litecoin, traditionally a testing ground for techonlogies that may one day enter the Bitcoin protocol. Segwit is one of a number of competing proposal for solving Bitcoin's scaling issues, and revolved around the creations of sidechains (transactional links that exist outside the main Bitcoin blockchain).",
+        "url": "http://www.coindesk.com/litecoins-segwit-activation-why-it-matters-and-whats-next/"
+      },
+      {
+        "title": "Why we are excited about Enterprise Ethereum Alliance: Perspectives from a crypto protocol startup",
         "date": "March 2, 2017",
-        "desc": "A breakdown of the Enterprise Ethereum Alliance and the burgeoning possibilities for partnerships between crypto startups and established enterprise players. Posits an interesting thesis, which is that private blockchains and blockchain protocols will benefit from and depend on an increased entrenchedness of public blockchsin",
+        "desc": "A breakdown of the Enterprise Ethereum Alliance and the burgeoning possibilities for partnerships between crypto startups and established enterprise players. Posits an interesting thesis, which is that private blockchains and blockchain protocols will benefit from and depend on an increased entrenchedness of public blockchain.",
         "url": "https://medium.com/string-labs-collection/why-we-are-excited-about-enterprise-ethereum-alliance-perspectives-from-a-protocol-startup-8fa31081ea6d"
+      },
+      {
+        "title": "How to handle your Bitcoin investments in 2017",
+        "date": "March 2, 2017",
+        "desc": "There has been a ton of growth, and a ton of froth, in the cryptocurrency market so far this year. The market is volative and any particular day could see double-digit gains or losses. This article goes over some of the common lines of thinking for newer crypto investors, and favors a buy-and-hold strategy predicated on bigger gains, and decreased volatility, in the years to come.",
+        "url": "https://medium.com/simone-brunozzi/how-to-handle-your-bitcoin-investments-in-2017-cc8e38a2b297"
       }
     ],
     "Analysis (Bearish)": [
@@ -86,10 +152,22 @@
         "url": "http://www.coindesk.com/35-million-30-seconds-token-sale-internet-browser-brave-sells/"
       },
       {
+        "title": "Consensus 2017: Global Insurers Debate the Future of Prediction Markets",
+        "date": "May 23, 2017",
+        "desc": "Insurers have started exploring token-based prediction markets as ways to calculate risk. Via tokens, insurance agencies can use the \"wisdom of the crowd\" to drive better outcome forecasts. In the next five years, prediction markets are likely to become a sizable sector of the token economy.",
+        "url": "http://www.coindesk.com/consensus-2017-insurers-blockchain-prediction-markets/"
+      },
+      {
         "title": "ShapeShift Breaks New Ground With 'Prism' Digital Asset Portfolio Product",
         "date": "May 22, 2017",
         "desc": "Crypto startup ShapeShift is catalyzing the next level of graduation for tokens: crypto derivatives pegged to existing blockchains. Built on top of Ethereum, Prism plans to offer diversified crypto portfolios based on allocations analagous to modern diversified equity portfolios.",
         "url": "http://www.coindesk.com/shapeshift-breaks-new-ground-prism-digital-asset-portfolio-product/"
+      },
+      {
+        "title": "Enterprise Ethereum Alliance Adds 86 Members to Blockchain Consortium",
+        "date": "May 22, 2017",
+        "desc": "The Enterprise Ethereum Alliance has announced new major stakeholders, with giant such as Merck and Toyota joining JPMorgan, Microsoft, Accenture and others in the Ethereum initiative. The EEA will drive significant flows of capital into the Ethereum ecosystem in the coming years.",
+        "url": "http://www.coindesk.com/enterprise-ethereum-alliance-new-members-blockchain/"
       },
       {
         "title": "Worlds collide: JPM works with team behind anonymous crypto Zcash",
@@ -102,10 +180,27 @@
         "date": "May 1, 2017",
         "desc": "A strip club in Vegas has started issuing it own token. Scan a QR code on a stripper's thigh to reward her for a good dance. A left-field application of cryptocurrency, but in the same vein an indicator of the vast breadth of potential use cases.",
         "url": "https://motherboard.vice.com/en_us/article/a-las-vegas-strip-club-is-making-it-rain-cryptocurrency"
+      },
+      {
+        "title": "Ethereum Meets Zcash? Why IPFS Plans a Multi-Blockchain Browser",
+        "date": "April 29, 2017",
+        "desc": "Describes IPFS, a distributed, blockchain-based filesystem still under development. IPFS, much like Ethereum, wants to use the decentralizing power of the blockchain to \"disintermediate the Inernet\". Also, some talk on cross-blockchain reconciliation via IPFS - this is until now an unsolved problem, and methods of linking data on different blockchains will find many future applications.",
+        "url": "http://www.coindesk.com/ethereum-meets-zcash-why-ipfs-plans-a-multi-blockchain-browser/"
       }
     ],
     "Videos": [
-
+      {
+        "title": "Tim Draper Predicts $10,000 Per Bitcoin by 2018",
+        "date": "January 18, 2016",
+        "desc": "Tim Draper, noted investor, announced his big bet on the token economy in early 2016. Since then, growths have seemed to be on track, and a five-figure bitcoin price seems quite possible within a year. In the past few weeks, Draper has mentioned that he still believes in continued growth.",
+        "url": "https://www.youtube.com/watch?v=VwDtU3l7OK0"
+      },
+      {
+        "title": "Tim Draper Predicts $10,000 Per Bitcoin by 2018",
+        "date": "January 18, 2016",
+        "desc": "Tim Draper, noted investor, announced his big bet on the token economy in early 2016. Since then, growths have seemed to be on track, and a five-figure bitcoin price seems quite possible within a year. In the past few weeks, Draper has mentioned that he still believes in continued growth.",
+        "url": "https://www.youtube.com/watch?v=7GZ9sN1cgik"
+      }
     ]
   },
   "sectionOrder": [

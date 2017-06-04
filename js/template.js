@@ -19,9 +19,8 @@ function loadJSON(section){
       });
 
       $('.image-list li:nth-child(-n+5) img').trigger('unveil');
-    } else if (section === "coins") {
-
     } else {
+        console.log('COMPILING', data)
       compiledHTML = Handlebars.compile(template)(data);
       $('.' + section).html(compiledHTML);
     }

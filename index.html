@@ -44,6 +44,13 @@
     {{/each}}
   </script>
 
+  <script id="coins-template" type="text/x-handlebars-template">
+    {{#each sectionOrder}}
+        <h3>{{this}}</h3>
+        {{sections[this]}}
+    {{/each}}
+  </script>
+
 
   <title>A Kevin Kennis Phantasmagoria</title>
 </head>
@@ -58,8 +65,8 @@
         <li class="projects-nav nav-item">Projects</li>
         <li class="blog-nav nav-item">Blog</li>
         <li class="photos-nav nav-item">My World</li>
-        <li class="about-nav nav-item">About</li>
         <li class="coins-nav nav-item">Coins</li>
+        <li class="about-nav nav-item">About</li>
       </ul>
     </section>
 
