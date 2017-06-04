@@ -1,4 +1,8 @@
 $(document).ready(function(){
+    Handlebars.registerHelper('lookupProp', function (obj, key) {
+        return obj[key];
+    });
+
   ['projects', 'blog', 'photos', 'coins'].forEach(loadJSON);
 });
 

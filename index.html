@@ -47,7 +47,7 @@
   <script id="coins-template" type="text/x-handlebars-template">
     {{#each sectionOrder}}
         <h3>{{this}}</h3>
-        {{sections[this]}}
+        <pre>{{lookupProp sections this}}</pre>
     {{/each}}
   </script>
 
