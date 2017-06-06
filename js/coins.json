@@ -34,6 +34,18 @@
     ],
     "Analysis (Bullish)": [
       {
+        "title": "Business in the age of Ethereum",
+        "date": "June 4, 2017",
+        "desc": "Yet another exploration of the vast array of applications of the Ethereum virtual machine to enterprise. Many people now see Ethereum has having bigger potential than bitcoin, especially in technological utility, and many large cap companies have made investments reflecting this sentiment. Possible applications include KYC, cross-border transactions and settlement, and decentralized crowdfunding.",
+        "url": "https://techcrunch.com/2017/06/04/business-in-the-age-of-ethereum/"
+      },
+      {
+        "title": "Five Reasons Why Ethereum Will Continue to Rise",
+        "date": "June 4, 2017",
+        "desc": "Even within the incredibly volatile cryptocurrency market, Ethereum has been on a wild ride: in the past week, it has dropped 40%, and then surged back to all time hights. There are many reasons why Ethereum's surge is far from over: large corporations have started backingprojects on Ethereum, the Ethereum virtual machine offers a host of potential application, all of which will drive value into the ecosystem, and in the mainstream investing community, Ethereum has gained increased recognition: leading to mainstream acceptance and larger capital inflows.",
+        "url": "http://www.altcointoday.com/5-reasons-ethereum-eth-will-continue-rise/"
+      },
+      {
         "title": "Crypto-Investing in the Age of Whales",
         "date": "May 31, 2017",
         "desc": "Yet another article for the initial crypto investor. Over the past few months a number of whales, major sources of capital and market power in cryptocurrencies, have emerged, and some these players have enough holdings to push markets up and down according to their needs. For the crypto-retail investor, timing when these players make market-shifting moves will be very difficult, so it is prudent to create a disciplined plan around long-term holdings.",
@@ -132,6 +144,12 @@
     ],
     "Analysis (Bearish)": [
       {
+        "title": "Dear SEC: ICOs & ‘Tokens’ are killing innovation",
+        "date": "May 15, 2017",
+        "desc": "A reasonable teardown of the ICO phenomenon. Many recent ICOs have pulled off huge raises, at unsustainable market caps, and coin offerings can also be more risky than the offering parties let on. Many of these tokens are backed by dubious technology, with entire market caps driven by speculation - this fervor is sure to deflate once the technological wheat separates from the chaff. Additionally, ICOs disrupt securities regulation, the goal of which is to protect investors.",
+        "url": "https://hackernoon.com/dear-sec-icos-tokens-are-killing-innovation-2f8d287f88c3"
+      },
+      {
         "title": "Why Bitcoin is Different from Other Cryptocurrencies",
         "date": "May 15, 2017",
         "desc": "A bitcoin vs. altcoin breakdown, with the thesis that bitcoin has proved utility and all other altcoin investment is chiefly speculation (this, by the way, is true). A valuable passage describes a number of possible disaster scenarios for the crypto market.",
@@ -145,6 +163,24 @@
       }
     ],
     "News": [
+      {
+        "title": "Vladimir Putin and Vitalik Buterin Discuss Ethereum 'Opportunities'",
+        "date": "June 5, 2017",
+        "desc": "Vitalik Buterin, the spiritual leader of Ethereum, met with Vladimir Putin briefly last week, where they discussed opportunities in Ethereum. Events such as this signal that interest in cryptocurrency has spread, not only to large enterprises and financial insitutions, but to sovereign nations and the massive amounts of wealth they control. Governments running Ethereum - and more are sure to follow - will bode very well for the ecosystem.",
+        "url": "http://www.coindesk.com/vladimir-putin-vitalik-buterin-discuss-ethereum-opportunities-recent-forum/"
+      },
+      {
+        "title": "The World's Largest CSDs Are Forming a New Blockchain Consortium",
+        "date": "June 5, 2017",
+        "desc": "A number of central securities depositories, large clearing houses that handle securities transactions, have started looking into blockchain technology. North America, Europe, and Africa's largest CSDs are all major stakeholders, and imagine that blockchain could create efficincies in settlement processes.",
+        "url": "http://www.coindesk.com/worlds-largest-csds-forming-new-blockchain-consortium/"
+      },
+      {
+        "title": "These Digital Tokens Are Making Bitcoin's Huge Rally Look Tame",
+        "date": "June 5, 2017",
+        "desc": "Bitcoin has been on a tear lately - but it's not the only coin that is exploding right now. Altcoins, smaller coins with smaller market caps and less established utility, have become massive speculation vehicles, and some of their market values have soared. A number of large investors are still wary of investing in smaller altcoins.",
+        "url": "https://www.bloomberg.com/news/articles/2017-06-05/digital-coins-are-making-bitcoin-s-rip-roaring-rally-appear-tame"
+      },
       {
         "title": "A Facebook Investor is Calling for Regulated ICO Investment Products",
         "date": "May 31, 2017",
