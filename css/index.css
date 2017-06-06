@@ -181,14 +181,18 @@ footer a {
 }
 
 .coins.footer {
+    border-top: 3px double #333333;
     text-align: center;
 }
 
 .coins.footer p {
     padding-top: 3em;
     padding-bottom: 3em;
-    border-top: 3px double #333333;
     width: 70%;
     margin: auto;
     font-style: italic;
+}
+
+.coins.footer p + p {
+    border-top: 3px double #333333;
 }
