@@ -132,6 +132,10 @@ header h3 {
   -o-transition: opacity .3s ease-in;
 }
 
+.image-list .image:hover {
+  cursor: pointer;
+}
+
 .caption {
   background-color: #EEEEEE;
 }
