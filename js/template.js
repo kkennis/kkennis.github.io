@@ -2,7 +2,7 @@ $(document).ready(function(){
     Handlebars.registerHelper('lookupProp', function (obj, key) {
         return obj[key];
     });
-    
+
     ['projects', 'blog', 'photos'].forEach(loadJSON);
 });
 
@@ -16,13 +16,9 @@ function loadJSON(section){
             compiledHTML = Handlebars.compile(template)(data);
             $('.' + section + ' ul').html(compiledHTML);
 
-            $('img').unveil(800, function() {
-                $(this).load(function(){
-                    this.style.opacity = 1;
-                })
-            });
+            var viewer = new Viewer(document.getElementById('image-list'), {
 
-            $('.image-list li:nth-child(-n+5) img').trigger('unveil');
+            });
         } else {
             compiledHTML = Handlebars.compile(template)(data);
             $('.' + section).html(compiledHTML);

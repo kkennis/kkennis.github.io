@@ -5,12 +5,13 @@
   <meta charset="utf-8" />
   <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/viewer.css">
   <link rel="stylesheet" type="text/css" href="css/icons.css">
   <link rel="stylesheet" type="text/css" href="css/index.css">
 
   <script type="text/javascript" src="js/jquery.min.js"></script>
-  <script type="text/javascript" src="js/jquery.unveil.js"></script>
   <script type="text/javascript" src="js/handlebars.js"></script>
+  <script type="text/javascript" src="js/viewer.js"></script>
   <script type="text/javascript" src="js/template.js"></script>
   <script type="text/javascript" src="js/app.js"></script>
 
@@ -38,7 +39,7 @@
   <script id="photos-template" type="text/x-handlebars-template">
     {{#each photos}}
       <li>
-        <img src="img1.jpg" data-src="images/{{link}}" />
+        <img src="images/{{link}}" />
         <p class="italic caption">{{caption}}</p>
       </li>
     {{/each}}
@@ -51,7 +52,7 @@
     <section class="landing">
       <header>
         <a href="http://kevinkennis.com"><h1>Kevin Kennis</h1></a>
-        <h3>Technology, literature, travel, California</h3>
+        <h3>Technology, travel, words, California</h3>
       </header>
       <ul class="nav">
         <li class="projects-nav nav-item">Projects</li>
@@ -68,7 +69,7 @@
     </section>
 
     <section class="photos page">
-      <ul class="image-list"></ul>
+      <ul id='image-list' class="image-list"></ul>
     </section>
 
     <section class="about page">
