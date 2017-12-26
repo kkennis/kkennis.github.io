@@ -1,6 +1,34 @@
 {
   "photos": [
     {
+      "link": "lakesanantonio.png",
+      "caption": "Lake San Antonio"
+    },
+    {
+      "link": "lochlomond.png",
+      "caption": "Loch Lomond"
+    },
+    {
+      "link": "bryantdenny.png",
+      "caption": "Bryant-Denny Stadium"
+    },
+    {
+      "link": "fallingwater.png",
+      "caption": "Falling Water"
+    },
+    {
+      "link": "zenopposition.png",
+      "caption": "Zen Opposition"
+    },
+    {
+      "link": "hoodriver.png",
+      "caption": "Hood River"
+    },
+    {
+      "link": "cascadelake.png",
+      "caption": "Cascade Lake"
+    },
+    {
       "link": "panamacity.png",
       "caption": "Panama City"
     },
