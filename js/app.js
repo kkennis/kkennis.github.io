@@ -1,6 +1,5 @@
 $(document).ready(function(){
-slideTitleDown();
-
+  slideTitleDown();
 
   $('li').click(function(event){
     event.preventDefault();
@@ -15,12 +14,6 @@ slideTitleDown();
       switchTab(self);
     }
   });
-
-  if (window.location.hash === '#coins') {
-    setTimeout(function(){
-        $('li.coins-nav').click();
-    }, 1100);
-  }
 });
 
 function drawDots(section){
@@ -57,7 +50,7 @@ function switchTab(context){
 
   $('.page').hide();
   $(sectionClass).show();
-  if (sectionClass === '.projects' || sectionClass === '.blog' || sectionClass === '.coins') {
+  if (sectionClass === '.projects' || sectionClass === '.blog') {
     drawDots(sectionClass);
   }
 }

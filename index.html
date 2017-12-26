@@ -44,22 +44,6 @@
     {{/each}}
   </script>
 
-  <script id="coins-template" type="text/x-handlebars-template">
-    {{#each sections}}
-        <h3 class='coins section-header'></h3>
-        <hr />
-        {{#each this}}
-            <section class="coins toc-item">
-                <span class="toc-title"><a href="{{url}}">{{title}}</a>&nbsp;&nbsp;</span>
-                <span class="dots"></span>
-                <span class="toc-date">{{date}}</span>
-                <p class='italic'>{{desc}}</p>
-            </section>
-        {{/each}}
-    {{/each}}
-  </script>
-
-
   <title>A Kevin Kennis Phantasmagoria</title>
 </head>
 <body>
@@ -73,7 +57,6 @@
         <li class="projects-nav nav-item">Projects</li>
         <li class="blog-nav nav-item">Blog</li>
         <li class="photos-nav nav-item">My World</li>
-        <li class="coins-nav nav-item">Coins</li>
         <li class="about-nav nav-item">About</li>
       </ul>
     </section>
@@ -86,23 +69,6 @@
 
     <section class="photos page">
       <ul class="image-list"></ul>
-    </section>
-
-    <section class="coins toc page">
-        <section class="coins list">
-        </section>
-        <section class="coins footer">
-            <p>
-                Interested in more? I book deep dives with non-technologists interested in investing in cryptocurrency. My knowledge bases includes: underlying technologies and protocol, how to trade, overviews of the enterprise landscape, medium and long-term theory discussions, current events, and methods of market research. Please contact me for more details.
-                <br />
-               <strong>kenniscrypto [at] Google's mail service</strong>
-            </p>
-            <p>
-               Want to invest but don't care about the rest? We are currently accepting applicants for a low-fee, front loaded crypto trading fund. Our fund's strategy is centered around medium and long-term holdings in Bitcoin and Ethereum, and a wide breadth of small investments in altcoins. For altcoins, we look first for clear business use cases, a community interested in building product (not just speculating), strong teams, and novel technologies and protocols. Please contact me to submit an application to the fund.
-               <br />
-               <strong>kenniscrypto [at] Google's mail service</strong>
-            </p>
-        </section>
     </section>
 
     <section class="about page">

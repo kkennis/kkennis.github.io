@@ -1,46 +1,60 @@
 {
   "projects": [
     {
+      "name": "BitGo",
+      "date": "August 2017 - Now",
+      "link": "https://www.bitgo.com/",
+      "github": "https://www.bitgo.com/",
+      "desc": "Building tools to bring digital currency to the mainstream."
+    },
+    {
+      "name": "Pacific Crypto",
+      "date": "August 2017 - Now",
+      "link": "https://pacificcrypto.com/",
+      "github": "https://pacificcrypto.com/",
+      "desc": "A family-and-friends crypto club."
+    },
+    {
       "name": "Skuchain",
-      "date": "January 2016 - Now",
+      "date": "January 2016 - July 2017",
       "link": "http://skuchain.com",
       "github": "http://skuchain.com",
-      "desc": "Building blockchain applications for international supply chains."
+      "desc": "Blockchain applications for international supply chains."
     },
     {
       "name": "Personal Website",
       "date": "January 2016",
       "link": "http://kevinkennis.com",
       "github": "http://github.com/kkennis/kkennis.github.io",
-      "desc": "Simple HTML/CSS website showing my work, writing, and a little about me. More to come!"
+      "desc": "A jumping off point."
     },
     {
       "name": "Hufter",
       "date": "December 2015",
       "link": "http://thehufts.herokuapp.com",
       "github": "http://github.com/kkennis/hufter",
-      "desc": "An equity market data and backtesting API written in Node.js in a functional style."
+      "desc": "An equity market data and backtesting API."
     },
     {
       "name": "PitchIt",
       "date": "October 2015",
       "link": "http://gopitchit.herokuapp.com",
       "github": "http://github.com/thepitch",
-      "desc": "Social website and iOS app for early stage businesses/products/founders. Vote on and discuss new ideas."
+      "desc": "Collaborative idea-iteration site."
     },
     {
       "name": "San Francisco Rents: A Visual Report",
       "date": "October 2015",
       "link": "http://sfrents.herokuapp.com",
       "github": "http://github.com/kkennis/sfrents-express",
-      "desc": "3D extrusion graph of San Francisco rents by ZIP code over the last five years. D3.js and three.js."
+      "desc": "3D extrusion graph of SF rents by zip code."
     },
     {
       "name": "TeamUp",
       "date": "September 2015",
       "link": "http://kkennis-teamup.herokuapp.com",
       "github": "http://github.com/kkennis/teamup",
-      "desc": "Stay up-to-date on all the best sources for all your favorite teams, all in one place."
+      "desc": "Sports news aggregator."
     }
   ]
 }
